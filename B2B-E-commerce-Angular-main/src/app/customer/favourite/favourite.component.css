@@ -1,0 +1,16 @@
+.favorites-container {
+    padding: 20px;
+  }
+  
+  .favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .empty-favorites-icon {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  

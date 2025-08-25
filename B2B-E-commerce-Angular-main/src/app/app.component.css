@@ -1,0 +1,109 @@
+/* Main Navbar */
+.main-navbar {
+    background-color: #FF6A00 !important;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* Sub Navbar */
+.sub-navbar {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Search box */
+.search-box {
+    max-width: 600px;
+    flex-grow: 1;
+}
+
+/* Mega menu */
+.mega-menu {
+    width: 100%;
+    left: 0;
+    padding: 1rem;
+    border-top: 2px solid #FF6A00;
+}
+
+/* Navigation dividers */
+.nav-divider {
+    border-left: 1px solid rgba(255,255,255,0.3);
+    height: 20px;
+    margin: 0 0.75rem;
+}
+
+/* Badge notifications */
+.badge-notification {
+    font-size: 0.6rem;
+    padding: 0.2em 0.4em;
+    top: 5px !important;
+}
+
+/* Categories dropdown */
+.categories-dropdown .dropdown-toggle::after {
+    display: none;
+}
+
+/* Mobile sub-nav */
+.mobile-sub-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+.mobile-sub-nav .nav-link {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Alibaba-style buttons */
+.btn-alibaba {
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+}
+.btn-alibaba:hover {
+    background-color: #e05d00;
+    color: white;
+}
+
+/* Improved dropdown items */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #FF6A00;
+}
+
+/* Search input focus */
+.search-box input:focus {
+    border-color: #FF6A00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.25);
+}
+
+/* Nav link hover */
+.nav-link:hover {
+    color: #FF6A00 !important;
+}
+
+/* Category icons */
+.category-icon {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+    color: #666;
+}
+.text-orange {
+    color: #FF6A00;
+}
+.btn-orange {
+    background-color: #FF6A00;
+    color: white;
+}
+.btn-outline-orange {
+    color: #FF6A00;
+    border-color: #FF6A00;
+}
+.btn-outline-orange:hover {
+    background-color: #FF6A00;
+    color: white;
+}

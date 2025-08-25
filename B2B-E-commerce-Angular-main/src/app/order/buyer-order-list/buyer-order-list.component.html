@@ -1,0 +1,52 @@
+<div class="buyer-order-container">
+  <h2>Your Orders</h2>
+  
+  <div *ngIf="isLoading" class="loading-message">
+    Loading your orders...
+  </div>
+  
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  
+  <div *ngIf="!isLoading && !errorMessage">
+    <div class="table-responsive">
+      <table class="order-table">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Payment Status</th>
+            <th>Shipping Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{ order.id }}</td>
+            <td>{{ order.productId }}</td>
+            <td>{{ order.name}}</td>
+            <td>{{ order.quantity }}</td>
+            <td>{{ order.total | currency:'USD':'symbol':'1.2-2' }}</td>
+            <td>
+              <span [class]="getStatusClass(order.paymentStatus || '')">
+                {{ order.paymentStatus }}
+              </span>
+            </td>
+            <td>
+              <span [class]="getStatusClass(order.shippingStatus || '')">
+                {{ order.shippingStatus }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div *ngIf="orders.length === 0" class="no-orders">
+      You haven't placed any orders yet.
+    </div>
+  </div>
+</div>

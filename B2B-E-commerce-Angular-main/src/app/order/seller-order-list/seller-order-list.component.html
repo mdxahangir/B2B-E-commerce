@@ -1,0 +1,50 @@
+<div class="seller-order-list">
+  <h2>Order Management</h2>
+
+  <div *ngIf="isLoading" class="loading">
+    Loading orders...
+  </div>
+
+  <div *ngIf="!isLoading">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Payment Status</th>
+          <th>Shipping Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.name }} (ID: {{ order.productId }})</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.total | currency:'USD':'symbol':'1.2-2' }}</td>
+          <td>
+            <span class="payment-status" [class.paid]="order.paymentStatus === 'PAID'"
+                  [class.pending]="order.paymentStatus === 'PENDING'"
+                  [class.failed]="order.paymentStatus === 'FAILED'">
+              {{ order.paymentStatus }}
+            </span>
+          </td>
+          <td>
+            <select [(ngModel)]="order.shippingStatus" 
+                    (change)="updateShippingStatus(order, order.shippingStatus!)"
+                    class="shipping-status">
+              <option *ngFor="let status of shippingStatuses" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="orders.length === 0" class="no-orders">
+      No orders found.
+    </div>
+  </div>
+</div>

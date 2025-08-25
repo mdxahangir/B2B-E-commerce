@@ -1,0 +1,353 @@
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-store-alt fa-2x"></i>
+            <h3>TradeAdmin</h3>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li><a href="#"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> <span>Orders</span></a></li>
+                <li><a href="#" class="active"><i class="fas fa-box-open"></i> <span>Products</span></a></li>
+                <li><a href="#"><i class="fas fa-users"></i> <span>Customers</span></a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> <span>Analytics</span></a></li>
+                <li><a href="#"><i class="fas fa-comments"></i> <span>Messages</span></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h2>Product Management</h2>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products...">
+                </div>
+                <div class="user-profile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                    <span>Admin User</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <!-- Stats Card -->
+            <div class="card">
+                <div class="card-body">
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                        <div style="text-align: center; padding: 15px; flex: 1; min-width: 150px;">
+                            <h3 style="color: var(--primary-color); font-size: 1.8rem;">2,458</h3>
+                            <p style="color: #777;">Total Products</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; flex: 1; min-width: 150px;">
+                            <h3 style="color: var(--success-color); font-size: 1.8rem;">1,856</h3>
+                            <p style="color: #777;">Active</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; flex: 1; min-width: 150px;">
+                            <h3 style="color: var(--warning-color); font-size: 1.8rem;">342</h3>
+                            <p style="color: #777;">Low Stock</p>
+                        </div>
+                        <div style="text-align: center; padding: 15px; flex: 1; min-width: 150px;">
+                            <h3 style="color: var(--danger-color); font-size: 1.8rem;">260</h3>
+                            <p style="color: #777;">Out of Stock</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filter Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Filters</h3>
+                    <button class="btn btn-success">+ Add Product</button>
+                </div>
+                <div class="card-body">
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <label for="product-category">Category</label>
+                            <select id="product-category">
+                                <option value="">All Categories</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="home">Home & Garden</option>
+                                <option value="beauty">Beauty</option>
+                                <option value="sports">Sports</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="product-status">Status</label>
+                            <select id="product-status">
+                                <option value="">All Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="stock-status">Stock Status</label>
+                            <select id="stock-status">
+                                <option value="">All</option>
+                                <option value="in-stock">In Stock</option>
+                                <option value="low-stock">Low Stock</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                            </select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-outline">Reset</button>
+                            <button class="btn btn-primary">Apply Filters</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View Toggle -->
+            <div class="view-toggle">
+                <button class="view-toggle-btn active"><i class="fas fa-list"></i></button>
+                <button class="view-toggle-btn"><i class="fas fa-th-large"></i></button>
+            </div>
+            
+            <!-- Products Table Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>All Products</h3>
+                    <button class="btn btn-primary">Export</button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/60" alt="Product" class="product-image"></td>
+                                    <td>
+                                        <a href="#" class="product-name">Wireless Bluetooth Headphones</a>
+                                        <div class="product-category">Electronics</div>
+                                    </td>
+                                    <td>Audio</td>
+                                    <td class="product-price">$59.99</td>
+                                    <td class="product-stock in-stock">125</td>
+                                    <td><span class="product-status active">Active</span></td>
+                                    <td>
+                                        <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/60" alt="Product" class="product-image"></td>
+                                    <td>
+                                        <a href="#" class="product-name">Smart Watch Fitness Tracker</a>
+                                        <div class="product-category">Electronics</div>
+                                    </td>
+                                    <td>Wearables</td>
+                                    <td class="product-price">$89.99</td>
+                                    <td class="product-stock low-stock">8</td>
+                                    <td><span class="product-status active">Active</span></td>
+                                    <td>
+                                        <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/60" alt="Product" class="product-image"></td>
+                                    <td>
+                                        <a href="#" class="product-name">Men's Running Shoes</a>
+                                        <div class="product-category">Clothing</div>
+                                    </td>
+                                    <td>Footwear</td>
+                                    <td class="product-price">$45.50</td>
+                                    <td class="product-stock out-of-stock">0</td>
+                                    <td><span class="product-status inactive">Inactive</span></td>
+                                    <td>
+                                        <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/60" alt="Product" class="product-image"></td>
+                                    <td>
+                                        <a href="#" class="product-name">Stainless Steel Water Bottle</a>
+                                        <div class="product-category">Home</div>
+                                    </td>
+                                    <td>Kitchen</td>
+                                    <td class="product-price">$19.99</td>
+                                    <td class="product-stock in-stock">72</td>
+                                    <td><span class="product-status active">Active</span></td>
+                                    <td>
+                                        <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/60" alt="Product" class="product-image"></td>
+                                    <td>
+                                        <a href="#" class="product-name">Wireless Charging Pad</a>
+                                        <div class="product-category">Electronics</div>
+                                    </td>
+                                    <td>Accessories</td>
+                                    <td class="product-price">$24.99</td>
+                                    <td class="product-stock in-stock">34</td>
+                                    <td><span class="product-status active">Active</span></td>
+                                    <td>
+                                        <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                        <button class="action-btn btn-outline"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products Grid View (Hidden by default) -->
+            <div class="card" style="display: none;">
+                <div class="card-header">
+                    <h3>All Products</h3>
+                    <button class="btn btn-primary">Export</button>
+                </div>
+                <div class="card-body">
+                    <div class="product-grid">
+                        <!-- Product Card 1 -->
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300" alt="Product" class="product-card-img">
+                            <div class="product-card-body">
+                                <h4 class="product-card-title">Wireless Bluetooth Headphones</h4>
+                                <div class="product-card-category">Electronics > Audio</div>
+                                <div class="product-card-price">$59.99</div>
+                                <div class="product-stock in-stock">125 in stock</div>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-status active">Active</span>
+                                <div>
+                                    <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 2 -->
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300" alt="Product" class="product-card-img">
+                            <div class="product-card-body">
+                                <h4 class="product-card-title">Smart Watch Fitness Tracker</h4>
+                                <div class="product-card-category">Electronics > Wearables</div>
+                                <div class="product-card-price">$89.99</div>
+                                <div class="product-stock low-stock">Low stock (8)</div>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-status active">Active</span>
+                                <div>
+                                    <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 3 -->
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300" alt="Product" class="product-card-img">
+                            <div class="product-card-body">
+                                <h4 class="product-card-title">Men's Running Shoes</h4>
+                                <div class="product-card-category">Clothing > Footwear</div>
+                                <div class="product-card-price">$45.50</div>
+                                <div class="product-stock out-of-stock">Out of stock</div>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-status inactive">Inactive</span>
+                                <div>
+                                    <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Card 4 -->
+                        <div class="product-card">
+                            <img src="https://via.placeholder.com/300" alt="Product" class="product-card-img">
+                            <div class="product-card-body">
+                                <h4 class="product-card-title">Stainless Steel Water Bottle</h4>
+                                <div class="product-card-category">Home > Kitchen</div>
+                                <div class="product-card-price">$19.99</div>
+                                <div class="product-stock in-stock">72 in stock</div>
+                            </div>
+                            <div class="product-card-footer">
+                                <span class="product-status active">Active</span>
+                                <div>
+                                    <button class="action-btn btn-primary"><i class="fas fa-eye"></i></button>
+                                    <button class="action-btn btn-outline"><i class="fas fa-edit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">&raquo;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple view toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const listViewBtn = document.querySelector('.view-toggle-btn:first-child');
+        const gridViewBtn = document.querySelector('.view-toggle-btn:last-child');
+        const listViewCard = document.querySelectorAll('.card')[2];
+        const gridViewCard = document.querySelectorAll('.card')[3];
+        
+        listViewBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            gridViewBtn.classList.remove('active');
+            listViewCard.style.display = 'block';
+            gridViewCard.style.display = 'none';
+        });
+        
+        gridViewBtn.addEventListener('click', function() {
+            this.classList.add('active');
+            listViewBtn.classList.remove('active');
+            listViewCard.style.display = 'none';
+            gridViewCard.style.display = 'block';
+        });
+    });
+</script>

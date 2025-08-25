@@ -1,0 +1,67 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600?text=Trade+Shows');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+.event-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.event-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+.event-img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+.event-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f85606;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+.btn-orange {
+    background-color: #f85606;
+    color: white;
+}
+.btn-orange:hover {
+    background-color: #e04d05;
+    color: white;
+}
+.category-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.category-card:hover {
+    border-color: #f85606;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.category-icon {
+    font-size: 2rem;
+    color: #f85606;
+    margin-bottom: 1rem;
+}
+.filter-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+.countdown {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f85606;
+}

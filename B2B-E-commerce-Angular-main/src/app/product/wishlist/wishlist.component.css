@@ -1,0 +1,21 @@
+.wishlist-container {
+  max-width: 1200px;
+}
+
+.wishlist-card img {
+  height: 180px;
+  object-fit: contain;
+}
+
+.wishlist-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn i {
+  margin-right: 4px;
+}
+
+.loading i {
+  color: #0d6efd;
+}

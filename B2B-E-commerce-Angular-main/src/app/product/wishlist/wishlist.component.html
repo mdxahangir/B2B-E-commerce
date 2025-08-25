@@ -1,0 +1,44 @@
+<div class="wishlist-container container my-4">
+  <h2 class="mb-4">
+    <i class="fas fa-heart text-danger"></i> My Wish List
+  </h2>
+
+  <div *ngIf="isLoading" class="text-center my-4">
+    <i class="fas fa-spinner fa-spin fa-2x"></i>
+    <p>Loading your wish list...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+  </div>
+
+  <div *ngIf="wishList.length > 0 && !isLoading" class="row g-3">
+    <div *ngFor="let item of wishList" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card h-100 shadow-sm wishlist-card">
+        <img [src]="item.product.imageUrl || 'assets/default-product.png'"
+             class="card-img-top p-2 object-fit-contain"
+             [alt]="item.product.name">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title mb-2 text-truncate">{{ item.product.name }}</h5>
+          <p class="card-text small text-muted">{{ item.product.description | slice:0:50 }}...</p>
+          <p class="fw-bold mb-2">{{ item.product.price | currency }}</p>
+          <div class="mt-auto d-grid gap-2">
+            <button (click)="addToCart(item.product)"
+                    class="btn btn-sm btn-primary">
+              <i class="fas fa-shopping-cart"></i> Add to Cart
+            </button>
+            <button (click)="removeFromWishList(item.id)"
+                    class="btn btn-sm btn-outline-danger">
+              <i class="fas fa-trash"></i> Remove
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoading && wishList.length === 0" class="text-center mt-5">
+    <i class="fas fa-heart-broken fa-3x text-muted mb-2"></i>
+    <p class="lead">Your wish list is empty.</p>
+  </div>
+</div>

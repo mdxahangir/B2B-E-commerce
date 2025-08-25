@@ -1,0 +1,343 @@
+<div class=" d-flex">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <div class="sidebar w-250 d-flex flex-column">
+        <div class="logo">
+            <i class="fas fa-store"></i> Ali<span>Seller</span>
+        </div>
+        <div class="flex-grow-1 overflow-auto p-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/storefront-management">
+                        <i class="fas fa-box-open"></i> Storefront Management
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/product-listings" class="nav-link">Product Listings</a></li>
+                        <li><a routerLink="/store-customization" class="nav-link">Store Customization</a></li>
+                        <li><a routerLink="/inventory-control" class="nav-link">Inventory Control</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/order-management">
+                        <i class="fas fa-shopping-cart"></i> Order Management
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/order-processing" class="nav-link">Order Processing</a></li>
+                        <li><a routerLink="/payment-tracking" class="nav-link">Payment Tracking</a></li>
+                        <li><a routerLink="/shipping-integration" class="nav-link">Shipping Integration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer-engagement">
+                        <i class="fas fa-users"></i> Customer Engagement
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/inquiry-management" class="nav-link">Inquiry Management</a></li>
+                        <li><a routerLink="/messaging-system" class="nav-link">Messaging System</a></li>
+                        <li><a routerLink="/feedback" class="nav-link">Feedback & Reviews</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/analytics">
+                        <i class="fas fa-chart-line"></i> Analytics & Insights
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/performance-petrics" class="nav-link">Performance Metrics</a></li>
+                        <li><a routerLink="/buyer-behavior" class="nav-link">Buyer Behavior</a></li>
+                        <li><a routerLink="/market-trends" class="nav-link">Market Trends</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/marketing">
+                        <i class="fas fa-bullhorn"></i> Marketing & Promotion
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/advertising-tools" class="nav-link">Advertising Tools</a></li>
+                        <li><a routerLink="/promotional-campaigns" class="nav-link">Promotional Campaigns</a></li>
+                        <li><a routerLink="/seo-optimization" class="nav-link">SEO Optimization</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/account">
+                        <i class="fas fa-user-cog"></i> Account & Compliance
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/profile-settings" class="nav-link">Profile Settings</a></li>
+                        <li><a routerLink="/verification" class="nav-link">Verification</a></li>
+                        <li><a routerLink="/compliance-monitoring" class="nav-link">Compliance Monitoring</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/support-resource">
+                        <i class="fas fa-question-circle"></i> Support & Resources
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/help-center" class="nav-link">Help Center</a></li>
+                        <li><a routerLink="/seller-training" class="nav-link">Seller Training</a></li>
+                        <li><a routerLink="/community-forums" class="nav-link">Community Forums</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="page-title">Order Processing</div>
+            <div class="user-info">
+                <div class="user-avatar">JD</div>
+                <div>John Doe</div>
+            </div>
+        </div>
+        
+        <!-- Order Processing Card -->
+        <div class="order-card">
+            <div class="card-header">
+                <div class="card-title">All Orders</div>
+                <div class="order-filters">
+                    <div class="filter-group">
+                        <label>Status:</label>
+                        <select>
+                            <option>All Statuses</option>
+                            <option>Waiting for Payment</option>
+                            <option>Processing</option>
+                            <option>Shipped</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Date:</label>
+                        <select>
+                            <option>Last 7 Days</option>
+                            <option selected>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                            <option>Custom Range</option>
+                        </select>
+                    </div>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search orders...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Status Tabs -->
+            <div class="status-tabs">
+                <div class="status-tab active">
+                    All Orders <span class="badge">42</span>
+                </div>
+                <div class="status-tab">
+                    Waiting <span class="badge">5</span>
+                </div>
+                <div class="status-tab">
+                    Processing <span class="badge">12</span>
+                </div>
+                <div class="status-tab">
+                    Shipped <span class="badge">8</span>
+                </div>
+                <div class="status-tab">
+                    Completed <span class="badge">15</span>
+                </div>
+                <div class="status-tab">
+                    Cancelled <span class="badge">2</span>
+                </div>
+            </div>
+            
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Buyer</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="order-id">#ORD-78451</td>
+                        <td>
+                            <div class="buyer-info">
+                                <div class="buyer-avatar">GT</div>
+                                <div>Global Trading Co.</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/50" class="product-image" alt="Product">
+                                <div>
+                                    <div class="product-name">Wireless Bluetooth Headphones</div>
+                                    <div class="product-sku">SKU: HP-BT-2023</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>2</td>
+                        <td>$245.90</td>
+                        <td><span class="status processing">Processing</span></td>
+                        <td>
+                            <div class="order-actions">
+                                <button class="action-btn primary">Process</button>
+                                <button class="action-btn">Message</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#ORD-78450</td>
+                        <td>
+                            <div class="buyer-info">
+                                <div class="buyer-avatar">TS</div>
+                                <div>Tech Solutions Ltd</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/50" class="product-image" alt="Product">
+                                <div>
+                                    <div class="product-name">Smart Watch Pro</div>
+                                    <div class="product-sku">SKU: SW-PRO-2023</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>$189.00</td>
+                        <td><span class="status shipped">Shipped</span></td>
+                        <td>
+                            <div class="order-actions">
+                                <button class="action-btn">Track</button>
+                                <button class="action-btn">Message</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#ORD-78449</td>
+                        <td>
+                            <div class="buyer-info">
+                                <div class="buyer-avatar">EW</div>
+                                <div>Electro World</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/50" class="product-image" alt="Product">
+                                <div>
+                                    <div class="product-name">USB-C Fast Charger</div>
+                                    <div class="product-sku">SKU: CH-USB-50W</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>5</td>
+                        <td>$542.75</td>
+                        <td><span class="status waiting">Waiting for Payment</span></td>
+                        <td>
+                            <div class="order-actions">
+                                <button class="action-btn" disabled>Process</button>
+                                <button class="action-btn">Message</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#ORD-78448</td>
+                        <td>
+                            <div class="buyer-info">
+                                <div class="buyer-avatar">HG</div>
+                                <div>Home Goods Inc</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/50" class="product-image" alt="Product">
+                                <div>
+                                    <div class="product-name">Air Fryer 5.5L</div>
+                                    <div class="product-sku">SKU: AF-5500-BK</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>$98.50</td>
+                        <td><span class="status completed">Completed</span></td>
+                        <td>
+                            <div class="order-actions">
+                                <button class="action-btn success">Review</button>
+                                <button class="action-btn">Message</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="order-id">#ORD-78447</td>
+                        <td>
+                            <div class="buyer-info">
+                                <div class="buyer-avatar">FT</div>
+                                <div>Fashion Trends</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="product-info">
+                                <img src="https://via.placeholder.com/50" class="product-image" alt="Product">
+                                <div>
+                                    <div class="product-name">Men's Running Shoes</div>
+                                    <div class="product-sku">SKU: SH-RUN-42-BK</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>3</td>
+                        <td>$1,245.00</td>
+                        <td><span class="status cancelled">Cancelled</span></td>
+                        <td>
+                            <div class="order-actions">
+                                <button class="action-btn">Message</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="pagination">
+                <div class="pagination-info">Showing 1 to 5 of 42 orders</div>
+                <div class="pagination-controls">
+                    <button disabled><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple interaction for the demo
+    document.querySelectorAll('.order-id').forEach(el => {
+        el.addEventListener('click', () => {
+            alert('Viewing order details for ' + el.textContent);
+        });
+    });
+    
+    document.querySelectorAll('.status-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelector('.status-tab.active').classList.remove('active');
+            this.classList.add('active');
+            // In a real app, this would filter the orders
+            alert('Filtering orders by status: ' + this.textContent.trim());
+        });
+    });
+    
+    document.querySelectorAll('.action-btn.primary').forEach(btn => {
+        if (!btn.disabled) {
+            btn.addEventListener('click', () => {
+                alert('Processing order...');
+            });
+        }
+    });
+</script>

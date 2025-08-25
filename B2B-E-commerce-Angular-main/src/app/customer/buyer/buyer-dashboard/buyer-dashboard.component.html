@@ -1,0 +1,468 @@
+<body>
+    <!-- Header -->
+    <header class="header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i> Ali<span>Buyer</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group search-bar">
+                        <input type="text" class="form-control" placeholder="Search for products, suppliers, categories...">
+                        <button class="btn" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-end align-items-center">
+                        <div class="dropdown me-3">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-globe"></i> English
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">中文</a></li>
+                                <li><a class="dropdown-item" href="#">Español</a></li>
+                                <li><a class="dropdown-item" href="#">Русский</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="nav-link me-3"><i class="fas fa-heart"></i> Favorites</a>
+                        <a href="#" class="nav-link me-3"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="accountDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i> My Account
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-box me-2"></i> Orders</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-comments me-2"></i> Messages</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 border-top border-bottom">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-box-open me-1"></i> Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-store me-1"></i> Suppliers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tags me-1"></i> Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-headset me-1"></i> Services</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#" class="btn btn-sm btn-outline-alibaba me-2"><i class="fas fa-download me-1"></i> Get App</a>
+                    <a href="#" class="btn btn-sm btn-alibaba"><i class="fas fa-question-circle me-1"></i> Help</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-4">
+        <div class="container">
+            <!-- Dashboard Overview -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="text-primary mb-2">
+                            <i class="fas fa-box-open fa-3x"></i>
+                        </div>
+                        <h5>Active Orders</h5>
+                        <h3 class="text-primary">12</h3>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="text-success mb-2">
+                            <i class="fas fa-check-circle fa-3x"></i>
+                        </div>
+                        <h5>Completed Orders</h5>
+                        <h3 class="text-success">87</h3>
+                        <a href="#" class="btn btn-sm btn-outline-success">View History</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="text-warning mb-2">
+                            <i class="fas fa-heart fa-3x"></i>
+                        </div>
+                        <h5>Favorites</h5>
+                        <h3 class="text-warning">24</h3>
+                        <a href="#" class="btn btn-sm btn-outline-warning">View List</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card h-100 text-center p-3">
+                        <div class="text-info mb-2">
+                            <i class="fas fa-comments fa-3x"></i>
+                        </div>
+                        <h5>Messages</h5>
+                        <h3 class="text-info">5</h3>
+                        <a href="#" class="btn btn-sm btn-outline-info">View Inbox</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="card mb-4">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Recent Orders</h5>
+                    <a href="#" class="btn btn-sm btn-alibaba">View All Orders</a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Supplier</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ALB-78945</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/30" class="rounded-circle me-2" width="30" height="30">
+                                            <span>Guangdong Tools Co.</span>
+                                        </div>
+                                    </td>
+                                    <td>2023-06-15</td>
+                                    <td>3</td>
+                                    <td class="price">$1,245.00</td>
+                                    <td><span class="badge bg-success">Shipped</span></td>
+                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Track</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#ALB-78944</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/30" class="rounded-circle me-2" width="30" height="30">
+                                            <span>Zhejiang Machinery</span>
+                                        </div>
+                                    </td>
+                                    <td>2023-06-14</td>
+                                    <td>1</td>
+                                    <td class="price">$3,480.00</td>
+                                    <td><span class="badge bg-warning text-dark">Processing</span></td>
+                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#ALB-78943</td>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/30" class="rounded-circle me-2" width="30" height="30">
+                                            <span>Shanghai Electronics</span>
+                                        </div>
+                                    </td>
+                                    <td>2023-06-12</td>
+                                    <td>5</td>
+                                    <td class="price">$890.00</td>
+                                    <td><span class="badge bg-info">Paid</span></td>
+                                    <td><a href="#" class="btn btn-sm btn-outline-primary">Invoice</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Tracking -->
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Order Tracking #ALB-78945</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="order-track">
+                                <div class="order-track-step completed">
+                                    <div class="order-track-status">
+                                        <h6>Order Placed</h6>
+                                        <p class="text-muted">June 15, 2023 10:30 AM</p>
+                                    </div>
+                                </div>
+                                <div class="order-track-step completed">
+                                    <div class="order-track-status">
+                                        <h6>Payment Confirmed</h6>
+                                        <p class="text-muted">June 15, 2023 11:45 AM</p>
+                                    </div>
+                                </div>
+                                <div class="order-track-step completed">
+                                    <div class="order-track-status">
+                                        <h6>Processing</h6>
+                                        <p class="text-muted">June 16, 2023 9:15 AM</p>
+                                    </div>
+                                </div>
+                                <div class="order-track-step active">
+                                    <div class="order-track-status">
+                                        <h6>Shipped</h6>
+                                        <p class="text-muted">June 18, 2023 2:30 PM</p>
+                                        <p>Tracking Number: SF123456789CN</p>
+                                        <a href="#" class="btn btn-sm btn-alibaba">Track Package</a>
+                                    </div>
+                                </div>
+                                <div class="order-track-step">
+                                    <div class="order-track-status">
+                                        <h6>Delivered</h6>
+                                        <p class="text-muted">Estimated: June 25, 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-white">
+                            <h5 class="mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <h6>Shipping Address</h6>
+                                <p class="text-muted">
+                                    Global Trading Inc.<br>
+                                    123 Business Park Ave<br>
+                                    New York, NY 10001<br>
+                                    United States<br>
+                                    Phone: +1 555-123-4567
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <h6>Payment Method</h6>
+                                <p class="text-muted">
+                                    <i class="fab fa-cc-visa me-2"></i> Visa ending in 1234<br>
+                                    Expires 05/2025
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <h6>Order Total</h6>
+                                <table class="table table-sm">
+                                    <tr>
+                                        <td>Subtotal</td>
+                                        <td class="text-end">$1,200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shipping</td>
+                                        <td class="text-end">$45.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th class="text-end">$1,245.00</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <button class="btn btn-alibaba w-100">Contact Supplier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommended Products -->
+            <div class="card mb-4">
+                <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Recommended For You</h5>
+                    <a href="#" class="btn btn-sm btn-alibaba">View All</a>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Industrial+Machine" class="card-img-top product-img" alt="Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Industrial Air Compressor 10HP</h6>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <small class="text-muted ms-1">(24)</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$1,250.00</div>
+                                        <button class="btn btn-sm btn-outline-alibaba"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Hydraulic+Pump" class="card-img-top product-img" alt="Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Hydraulic Power Unit 5HP</h6>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <small class="text-muted ms-1">(18)</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$980.00</div>
+                                        <button class="btn btn-sm btn-outline-alibaba"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/300x200?text=CNC+Parts" class="card-img-top product-img" alt="Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">CNC Machine Spare Parts Kit</h6>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <small class="text-muted ms-1">(32)</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$450.00</div>
+                                        <button class="btn btn-sm btn-outline-alibaba"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Safety+Gloves" class="card-img-top product-img" alt="Product">
+                                <div class="card-body">
+                                    <h6 class="card-title">Industrial Safety Gloves (100pcs)</h6>
+                                    <div class="rating mb-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <small class="text-muted ms-1">(45)</small>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="price">$120.00</div>
+                                        <button class="btn btn-sm btn-outline-alibaba"><i class="fas fa-cart-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Buy on Alibaba</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Buyer Central</a></li>
+                        <li><a href="#" class="text-white-50">Browse Categories</a></li>
+                        <li><a href="#" class="text-white-50">Request for Quotation</a></li>
+                        <li><a href="#" class="text-white-50">Ready to Ship</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Trade Assurance</a></li>
+                        <li><a href="#" class="text-white-50">Inspection Service</a></li>
+                        <li><a href="#" class="text-white-50">Logistics Service</a></li>
+                        <li><a href="#" class="text-white-50">Financial Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50">Help Center</a></li>
+                        <li><a href="#" class="text-white-50">Submit a Dispute</a></li>
+                        <li><a href="#" class="text-white-50">Report IPR Infringement</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Download App</h5>
+                    <div class="mb-3">
+                        <a href="#" class="d-block mb-2"><img src="https://via.placeholder.com/120x40?text=App+Store" alt="App Store" class="img-fluid"></a>
+                        <a href="#" class="d-block"><img src="https://via.placeholder.com/120x40?text=Google+Play" alt="Google Play" class="img-fluid"></a>
+                    </div>
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="small text-white-50">© 2023 Alibaba Clone. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 small me-3">Terms of Service</a>
+                    <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 small">Legal & Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+   
+</body>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h2>Buyer Dashboard</h2>
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+          </div>
+          <div class="card-body">
+            <h4>Welcome, {{ currentUser?.firstName }} {{ currentUser?.lastName }}</h4>
+            <p>Company: {{ currentUser?.companyName }}</p>
+            <p>Email: {{ currentUser?.email }}</p>
+            <p>Phone: {{ currentUser?.phoneCode }} {{ currentUser?.phoneArea }} {{ currentUser?.phoneNumber }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

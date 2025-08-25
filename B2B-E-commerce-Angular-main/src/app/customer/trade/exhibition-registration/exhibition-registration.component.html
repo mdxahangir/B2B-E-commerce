@@ -1,0 +1,570 @@
+ <!-- Header -->
+    <header class="exhibitor-header py-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="fw-bold display-4 mb-3">Become an Exhibitor</h1>
+                    <p class="lead mb-4">Showcase your products to millions of global buyers on GlobalB2B</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-white text-dark fs-6 py-2 px-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>Reach 10M+ buyers
+                        </span>
+                        <span class="badge bg-white text-dark fs-6 py-2 px-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>24/7 online showcase
+                        </span>
+                        <span class="badge bg-white text-dark fs-6 py-2 px-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>Verified supplier badge
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <img src="https://via.placeholder.com/400x300?text=Exhibitor+Showcase" alt="Exhibitor Benefits" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mb-5">
+        <!-- Benefits Section -->
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-4">
+                <h2 class="fw-bold">Why Exhibit on GlobalB2B?</h2>
+                <p class="text-muted">Maximize your global trade opportunities with our platform</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Global Exposure</h4>
+                    <p>Reach buyers from 200+ countries and regions with your 24/7 online showcase.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Targeted Leads</h4>
+                    <p>Get high-quality inquiries from serious buyers interested in your products.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center h-100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Sales Growth</h4>
+                    <p>Exhibitors typically see 3-5x more inquiries than standard suppliers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Form -->
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="form-section">
+                    <h2 class="form-title text-center mb-4">Exhibitor Application</h2>
+                    
+                    <!-- Progress Indicator -->
+                    <div class="mb-5">
+                        <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-company-tab" data-bs-toggle="pill" data-bs-target="#pills-company" type="button" role="tab">1. Company Info</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-products-tab" data-bs-toggle="pill" data-bs-target="#pills-products" type="button" role="tab">2. Products</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-exhibit-tab" data-bs-toggle="pill" data-bs-target="#pills-exhibit" type="button" role="tab">3. Exhibit Details</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <form id="exhibitorForm">
+                        <div class="tab-content" id="pills-tabContent">
+                            <!-- Company Information -->
+                            <div class="tab-pane fade show active" id="pills-company" role="tabpanel">
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-building me-2"></i>Basic Company Information</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="companyName" class="form-label required-field">Company Name</label>
+                                            <input type="text" class="form-control" id="companyName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="companyType" class="form-label required-field">Company Type</label>
+                                            <select class="form-select" id="companyType" required>
+                                                <option value="" selected disabled>Select type</option>
+                                                <option value="manufacturer">Manufacturer</option>
+                                                <option value="trading">Trading Company</option>
+                                                <option value="brand">Brand Owner</option>
+                                                <option value="wholesaler">Wholesaler</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="yearEstablished" class="form-label required-field">Year Established</label>
+                                            <input type="number" class="form-control" id="yearEstablished" min="1900" max="2023" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="employees" class="form-label required-field">Number of Employees</label>
+                                            <select class="form-select" id="employees" required>
+                                                <option value="" selected disabled>Select range</option>
+                                                <option value="1-10">1-10</option>
+                                                <option value="11-50">11-50</option>
+                                                <option value="51-200">51-200</option>
+                                                <option value="201-500">201-500</option>
+                                                <option value="501-1000">501-1000</option>
+                                                <option value="1001+">1001+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="businessLicense" class="form-label required-field">Business License Number</label>
+                                        <input type="text" class="form-control" id="businessLicense" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="companyAddress" class="form-label required-field">Company Address</label>
+                                        <textarea class="form-control" id="companyAddress" rows="2" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-globe-asia me-2"></i>Business Location</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="country" class="form-label required-field">Country/Region</label>
+                                            <select class="form-select" id="country" required>
+                                                <option value="" selected disabled>Select country</option>
+                                                <option value="CN">China</option>
+                                                <option value="US">United States</option>
+                                                <option value="IN">India</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <!-- More countries -->
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="city" class="form-label required-field">City</label>
+                                            <input type="text" class="form-control" id="city" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="website" class="form-label">Company Website</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">https://</span>
+                                            <input type="text" class="form-control" id="website">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-user-tie me-2"></i>Contact Information</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="contactName" class="form-label required-field">Contact Person</label>
+                                            <input type="text" class="form-control" id="contactName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="position" class="form-label required-field">Position</label>
+                                            <input type="text" class="form-control" id="position" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label required-field">Email</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone" class="form-label required-field">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="whatsapp" class="form-label">WhatsApp/WeChat</label>
+                                        <input type="text" class="form-control" id="whatsapp">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn btn-orange px-4" onclick="nextTab('pills-products-tab')">Next: Product Information</button>
+                                </div>
+                            </div>
+
+                            <!-- Product Information -->
+                            <div class="tab-pane fade" id="pills-products" role="tabpanel">
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-boxes me-2"></i>Main Products</h5>
+                                    <div class="mb-3">
+                                        <label for="mainCategories" class="form-label required-field">Main Product Categories</label>
+                                        <select class="form-select" id="mainCategories" multiple required>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="machinery">Machinery</option>
+                                            <option value="apparel">Apparel & Textiles</option>
+                                            <option value="home">Home & Garden</option>
+                                            <option value="beauty">Beauty & Personal Care</option>
+                                            <option value="toys">Toys & Games</option>
+                                            <option value="sports">Sports & Entertainment</option>
+                                            <option value="auto">Automotive</option>
+                                        </select>
+                                        <small class="text-muted">Hold Ctrl/Cmd to select multiple categories</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productDescription" class="form-label required-field">Detailed Product Description</label>
+                                        <textarea class="form-control" id="productDescription" rows="4" required></textarea>
+                                        <small class="text-muted">Describe your main products, materials, specifications, etc.</small>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="productionCapacity" class="form-label">Production Capacity</label>
+                                        <textarea class="form-control" id="productionCapacity" rows="2"></textarea>
+                                        <small class="text-muted">E.g., "100,000 units/month" or "Custom OEM/ODM available"</small>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-industry me-2"></i>Business Operations</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="exportPercentage" class="form-label">Export Percentage</label>
+                                            <select class="form-select" id="exportPercentage">
+                                                <option value="" selected disabled>Select range</option>
+                                                <option value="0-20">0-20%</option>
+                                                <option value="21-40">21-40%</option>
+                                                <option value="41-60">41-60%</option>
+                                                <option value="61-80">61-80%</option>
+                                                <option value="81-100">81-100%</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="mainMarkets" class="form-label">Main Export Markets</label>
+                                            <select class="form-select" id="mainMarkets" multiple>
+                                                <option value="NA">North America</option>
+                                                <option value="EU">Europe</option>
+                                                <option value="AS">Asia</option>
+                                                <option value="ME">Middle East</option>
+                                                <option value="AF">Africa</option>
+                                                <option value="SA">South America</option>
+                                                <option value="OC">Oceania</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Certifications (Check all that apply)</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="iso9001">
+                                                    <label class="form-check-label" for="iso9001">ISO 9001</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="iso14001">
+                                                    <label class="form-check-label" for="iso14001">ISO 14001</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="ce">
+                                                    <label class="form-check-label" for="ce">CE</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="fda">
+                                                    <label class="form-check-label" for="fda">FDA</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="rohs">
+                                                    <label class="form-check-label" for="rohs">RoHS</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="otherCert">
+                                                    <label class="form-check-label" for="otherCert">Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-images me-2"></i>Product Images</h5>
+                                    <p class="text-muted mb-3">Upload high-quality images of your products (Max 10 images, 5MB each)</p>
+                                    <div class="file-upload mb-3" onclick="document.getElementById('productImages').click()">
+                                        <i class="fas fa-cloud-upload-alt mb-3"></i>
+                                        <h5>Click to upload product images</h5>
+                                        <p class="text-muted">JPEG, PNG, or GIF</p>
+                                        <input type="file" id="productImages" class="d-none" multiple accept="image/*">
+                                    </div>
+                                    <div id="imagePreview" class="d-flex flex-wrap gap-2"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary px-4" onclick="prevTab('pills-company-tab')">Previous</button>
+                                    <button type="button" class="btn btn-orange px-4" onclick="nextTab('pills-exhibit-tab')">Next: Exhibit Details</button>
+                                </div>
+                            </div>
+
+                            <!-- Exhibit Details -->
+                            <div class="tab-pane fade" id="pills-exhibit" role="tabpanel">
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-star me-2"></i>Exhibit Package</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card h-100 border-primary">
+                                                <div class="card-header bg-primary text-white">
+                                                    <h5 class="mb-0">Standard Exhibit</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">$1,999<small class="text-muted fs-6">/year</small></h3>
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic product showcase</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Up to 50 products</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Company profile page</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic analytics</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Verified supplier badge</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer bg-transparent">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exhibitPackage" id="standardPackage" checked>
+                                                        <label class="form-check-label fw-bold" for="standardPackage">
+                                                            Select Standard Package
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="card h-100 border-warning">
+                                                <div class="card-header bg-warning text-dark">
+                                                    <h5 class="mb-0">Premium Exhibit</h5>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h3 class="card-title">$3,999<small class="text-muted fs-6">/year</small></h3>
+                                                    <ul class="list-unstyled">
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Enhanced product showcase</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Up to 200 products</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Premium company profile</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced analytics</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Featured placement</li>
+                                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer bg-transparent">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exhibitPackage" id="premiumPackage">
+                                                        <label class="form-check-label fw-bold" for="premiumPackage">
+                                                            Select Premium Package
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-file-alt me-2"></i>Required Documents</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="licenseUpload" class="form-label required-field">Business License</label>
+                                            <input type="file" class="form-control" id="licenseUpload" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="certificateUpload" class="form-label">Quality Certificates</label>
+                                            <input type="file" class="form-control" id="certificateUpload" multiple>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="catalogUpload" class="form-label">Product Catalog (PDF)</label>
+                                        <input type="file" class="form-control" id="catalogUpload" accept=".pdf">
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <h5 class="fw-bold mb-3"><i class="fas fa-file-signature me-2"></i>Terms & Agreement</h5>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">
+                                            I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Exhibitor Terms and Conditions</a>
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="agreePrivacy" required>
+                                        <label class="form-check-label" for="agreePrivacy">
+                                            I agree to the <a href="#">Privacy Policy</a> and authorize GlobalB2B to use my information
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="receiveUpdates">
+                                        <label class="form-check-label" for="receiveUpdates">
+                                            I want to receive updates and promotions from GlobalB2B
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-outline-secondary px-4" onclick="prevTab('pills-products-tab')">Previous</button>
+                                    <button type="submit" class="btn btn-orange px-4">Submit Application</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Exhibitor Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Exhibitor Eligibility</h6>
+                    <p>To qualify as a GlobalB2B Exhibitor, your company must be a legally registered business with valid business licenses and the ability to conduct international trade.</p>
+                    
+                    <h6>2. Subscription Fees</h6>
+                    <p>Exhibitor packages are annual subscriptions. Fees are non-refundable after 30 days of activation. Automatic renewal will occur unless cancelled 30 days before renewal date.</p>
+                    
+                    <h6>3. Content Guidelines</h6>
+                    <p>All product listings and company information must be accurate and comply with our content policies. GlobalB2B reserves the right to remove any content that violates our guidelines.</p>
+                    
+                    <h6>4. Intellectual Property</h6>
+                    <p>Exhibitors guarantee they have all necessary rights to display and offer their products. GlobalB2B is not responsible for any IP infringement by exhibitors.</p>
+                    
+                    <h6>5. Verification Process</h6>
+                    <p>All exhibitors undergo verification which may include business license checks, factory audits, or product testing. Approval typically takes 3-5 business days.</p>
+                    
+                    <h6>6. Termination</h6>
+                    <p>GlobalB2B reserves the right to terminate any exhibitor account for policy violations, with no refund of remaining subscription fees.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>GlobalB2B</h5>
+                    <p>Connecting global buyers and suppliers since 2010. Our platform facilitates billions in trade annually.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Buyers</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Browse Products</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Find Suppliers</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Trade Assurance</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Buyer Central</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Suppliers</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Become a Supplier</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Supplier Memberships</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Exhibitor Program</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Supplier Central</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Inspection Service</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Logistics</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Trade Finance</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Marketing Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Report Abuse</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Submit a Dispute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <p class="mb-0">© 2023 GlobalB2B. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Tab navigation functions
+        function nextTab(nextTabId) {
+            const nextTab = document.getElementById(nextTabId);
+            const tab = new bootstrap.Tab(nextTab);
+            tab.show();
+            
+            // Scroll to top of form section
+            document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function prevTab(prevTabId) {
+            const prevTab = document.getElementById(prevTabId);
+            const tab = new bootstrap.Tab(prevTab);
+            tab.show();
+            
+            // Scroll to top of form section
+            document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Image upload preview
+        document.getElementById('productImages').addEventListener('change', function(e) {
+            const imagePreview = document.getElementById('imagePreview');
+            imagePreview.innerHTML = '';
+            
+            const files = e.target.files;
+            for (let i = 0; i < files.length; i++) {
+                if (files[i].type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        img.style.maxWidth = '100px';
+                        img.style.maxHeight = '100px';
+                        img.className = 'img-thumbnail';
+                        imagePreview.appendChild(img);
+                    }
+                    reader.readAsDataURL(files[i]);
+                }
+            }
+        });
+
+        // Form submission
+        document.getElementById('exhibitorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your exhibitor application! Our team will review your information and contact you within 2 business days.');
+            // In a real implementation, you would send the form data to your server here
+        });
+    </script>

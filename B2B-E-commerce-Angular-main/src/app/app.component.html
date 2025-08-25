@@ -1,0 +1,348 @@
+<header>
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+    <div class="container-fluid">
+      <!-- Logo and Mobile Toggle -->
+      <a class="navbar-brand" routerLink="home">
+        <h4 class="mb-0 fw-bold">B2B Marketplace</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Main Navigation Content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <!-- Search Bar -->
+        <div class="d-flex search-box mx-lg-3 my-2 my-lg-0">
+          <div class="input-group">
+            <button class="btn btn-light dropdown-toggle border-end-0 rounded-start" type="button"
+              data-bs-toggle="dropdown">
+              <span class="filter-text">All Categories</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-start">
+              <li>
+                <h6 class="dropdown-header">Popular Categories</h6>
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-mobile-alt category-icon"></i>Electronics</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-home category-icon"></i>Home & Garden</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-tshirt category-icon"></i>Apparel</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-list me-2"></i>All Categories</a></li>
+            </ul>
+            <input type="text" class="form-control border-start-0 border-end-0"
+              placeholder="Search for products, suppliers...">
+            <button class="btn btn-alibaba rounded-end" type="submit">
+              <i class="fas fa-search"></i>
+              <span class="d-none d-lg-inline">Search</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side Items -->
+        <div class="d-flex flex-column flex-lg-row align-items-center ms-lg-auto">
+          <!-- Shipping -->
+          <div class="dropdown me-lg-1">
+            <a class="text-white text-decoration-none dropdown-toggle py-2 d-flex align-items-center"
+              routerLink="/checkout" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-truck me-1"></i>
+              <span class="d-none d-lg-inline">Deliver to: </span>
+              <!-- <span class="fw-medium">USA</span> -->
+            </a>
+            <!-- <ul class="dropdown-menu dropdown-menu-end">
+                        <li><h6 class="dropdown-header">Ship to</h6></li>
+                        <li><a class="dropdown-item" href="#"><span class="fi fi-us me-2"></span>United States</a></li>
+                        <li><a class="dropdown-item" href="#"><span class="fi fi-gb me-2"></span>United Kingdom</a></li>
+                        <li><a class="dropdown-item" href="#"><span class="fi fi-de me-2"></span>Germany</a></li>
+                        <li><a class="dropdown-item" href="#"><span class="fi fi-cn me-2"></span>China</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-globe-americas me-2"></i>More Countries</a></li>
+                    </ul> -->
+          </div>
+
+          <div class="nav-divider d-none d-lg-flex"></div>
+
+          <!-- Language -->
+          <div class="dropdown me-lg-2">
+            <a class="text-white text-decoration-none dropdown-toggle py-2 d-flex align-items-center" href="#"
+              role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-language me-1"></i>
+              <span>English</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <h6 class="dropdown-header">Language</h6>
+              </li>
+              <li><a class="dropdown-item" href="#"><span class="fi fi-us me-2"></span>English</a></li>
+              <li><a class="dropdown-item" href="#"><span class="fi fi-es me-2"></span>Español</a></li>
+              <li><a class="dropdown-item" href="#"><span class="fi fi-pt me-2"></span>Português</a></li>
+              <li><a class="dropdown-item" href="#"><span class="fi fi-fr me-2"></span>Français</a></li>
+              <li><a class="dropdown-item" href="#"><span class="fi fi-ru me-2"></span>Русский</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-divider d-none d-lg-flex"></div>
+
+          <!-- Messages and Cart -->
+          <div class="d-flex me-lg-3">
+            <div class="position-relative me-4">
+              <a routerLink="/messages" class="text-white py-2 px-1 d-inline-block" title="Messages">
+                <i class="fas fa-envelope"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge badge-notification bg-danger">3</span>
+              </a>
+            </div>
+
+            <div class="position-relative me-4">
+              <a routerLink="/cart" class="text-white py-2 px-1 d-inline-block" title="Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge badge-notification bg-danger">5</span>
+              </a>
+            </div>
+
+            <div class="position-relative">
+              <a routerLink="/wishlist" class="text-white py-2 px-1 d-inline-block" title="Wishlist">
+                <i class="fas fa-heart"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="nav-divider d-none d-lg-flex"></div>
+
+          <!-- Auth Buttons -->
+          <div class="d-flex my-2 my-lg-0">
+            <div class="me-2">
+              <a routerLink="/login" class="btn btn-outline-light btn-sm my-1">
+                <i class="fas fa-sign-in-alt me-1"></i>
+                <span>Sign In</span>
+              </a>
+            </div>
+            <div>
+              <a routerLink="/registration" class="btn btn-light btn-sm my-1 text-orange">
+                <i class="fas fa-user-plus me-1"></i>
+                <span>Join Free</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sub Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light sub-navbar py-0">
+    <div class="container-fluid">
+      <!-- Categories Mega Menu (Visible on desktop) -->
+      <div class="dropdown categories-dropdown me-3 d-none d-lg-block">
+        <button class="btn btn-orange dropdown-toggle py-2 px-3 fw-medium" type="button" id="categoriesDropdown"
+          data-bs-toggle="dropdown">
+          <i class="fas fa-bars me-2"></i> Categories
+        </button>
+        <div class="dropdown-menu mega-menu p-4">
+          <div class="row">
+            <div class="col-md-3">
+              <h6 class="fw-bold text-primary mb-3"><i class="fas fa-laptop me-2"></i>Electronics</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-mobile-alt category-icon"></i>
+                    Smartphones</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-tv category-icon"></i> TVs & Displays</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-laptop category-icon"></i> Laptops</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-headphones category-icon"></i> Audio</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-camera category-icon"></i> Cameras</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold text-primary mb-3"><i class="fas fa-home me-2"></i>Home & Garden</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-couch category-icon"></i> Furniture</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-utensils category-icon"></i> Kitchenware</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-lightbulb category-icon"></i> Lighting</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-bath category-icon"></i> Bathroom</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-leaf category-icon"></i> Garden</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold text-primary mb-3"><i class="fas fa-tshirt me-2"></i>Apparel</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-male category-icon"></i> Men's Wear</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-female category-icon"></i> Women's Wear</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-child category-icon"></i> Kids' Wear</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-shoe-prints category-icon"></i> Footwear</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-glasses category-icon"></i> Accessories</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6 class="fw-bold text-primary mb-3"><i class="fas fa-ellipsis-h me-2"></i>More Categories</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-car category-icon"></i> Automotive</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-basketball-ball category-icon"></i>
+                    Sports</a></li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-gamepad category-icon"></i> Toys & Games</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1"><i class="fas fa-industry category-icon"></i> Machinery</a>
+                </li>
+                <li><a href="#" class="dropdown-item py-1 text-orange fw-bold"><i
+                      class="fas fa-arrow-right category-icon"></i> View All Categories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Navigation Links (Desktop) -->
+      <div class="d-none d-lg-flex align-items-center">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-medium" routerLink="/shipping-rady"><i
+                class="fas fa-bolt text-orange me-1"></i> Ready to Ship</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-medium" routerLink="/trade-shows"><i
+                class="fas fa-star text-orange me-1"></i> Trade Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-medium" routerLink="/gold-supplier"><i
+                class="fas fa-certificate text-orange me-1"></i> Gold Suppliers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-medium" routerLink="/trade-assurance"><i
+                class="fas fa-shield-alt text-orange me-1"></i> Trade Assurance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-medium" routerLink="/services"><i
+                class="fas fa-industry text-orange me-1"></i> Services</a>
+          </li>
+        </ul>
+
+        <!-- Help Center -->
+        <div class="dropdown">
+          <a class="nav-link text-dark dropdown-toggle fw-medium" href="#" id="helpDropdown" data-bs-toggle="dropdown">
+            <i class="fas fa-question-circle text-orange me-1"></i> Help Center
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <h6 class="dropdown-header">Help Resources</h6>
+            </li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-shopping-cart me-2"></i>Buyer Help</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-store me-2"></i>Supplier Help</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-headset me-2"></i>Contact Support</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i>Learning Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Supplier Portal -->
+        <div class="ms-3">
+          <a routerLink="/buyer-t" class="btn btn-outline-orange btn-sm">
+            <i class="fas fa-store me-1"></i> Track Orders
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Sub Navigation Toggle -->
+      <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mobileSubNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sub Navigation (Visible on mobile) -->
+  <div class="collapse d-lg-none bg-white border-bottom mobile-sub-nav" id="mobileSubNav">
+    <div class="container-fluid">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-bolt text-orange me-1"></i> Ready</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-star text-orange me-1"></i> Shows</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-certificate text-orange me-1"></i> Gold</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-shield-alt text-orange me-1"></i> Assurance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-industry text-orange me-1"></i> Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-question-circle text-orange me-1"></i> Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#"><i class="fas fa-store text-orange me-1"></i> Suppliers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Country Flags (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
+
+  <script>
+
+    // Enhanced dropdown functionality
+    document.addEventListener('DOMContentLoaded', function () {
+      // Categories mega menu hover functionality
+      const categoriesDropdown = document.querySelector('.categories-dropdown');
+      if (categoriesDropdown) {
+        const dropdownToggle = categoriesDropdown.querySelector('[data-bs-toggle="dropdown"]');
+
+        categoriesDropdown.addEventListener('mouseenter', function () {
+          const bsDropdown = new bootstrap.Dropdown(dropdownToggle);
+          bsDropdown.show();
+        });
+
+        const dropdownMenu = categoriesDropdown.querySelector('.dropdown-menu');
+        dropdownMenu.addEventListener('mouseleave', function () {
+          const bsDropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+          bsDropdown.hide();
+        });
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function (event) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(function (dropdown) {
+          if (!dropdown.contains(event.target)) {
+            const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+            if (toggle) {
+              const bsDropdown = bootstrap.Dropdown.getInstance(toggle);
+              if (bsDropdown) {
+                bsDropdown.hide();
+              }
+            }
+          }
+        });
+      });
+
+      // Update filter text when category is selected
+      const categoryItems = document.querySelectorAll('.dropdown-menu.dropdown-menu-start .dropdown-item');
+      const filterText = document.querySelector('.filter-text');
+
+      categoryItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          const text = this.textContent.trim();
+          filterText.textContent = text;
+        });
+      });
+    });
+  </script>
+
+  <router-outlet></router-outlet>

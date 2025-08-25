@@ -1,0 +1,61 @@
+<div class="container mt-4">
+  <h3><i class="fas fa-chart-bar"></i> Sales Report</h3>
+
+  <!-- Filter Buttons -->
+  <div class="mb-3">
+    <button class="btn btn-sm btn-primary me-2" [disabled]="filter==='daily'" (click)="changeFilter('daily')">Daily</button>
+    <button class="btn btn-sm btn-primary me-2" [disabled]="filter==='weekly'" (click)="changeFilter('weekly')">Weekly</button>
+    <button class="btn btn-sm btn-primary me-2" [disabled]="filter==='monthly'" (click)="changeFilter('monthly')">Monthly</button>
+    <button class="btn btn-sm btn-primary" [disabled]="filter==='yearly'" (click)="changeFilter('yearly')">Yearly</button>
+  </div>
+
+  <!-- Loader -->
+  <div *ngIf="isLoading" class="text-center mt-4">
+    <div class="spinner-border text-primary"></div>
+    <p>Loading sales report...</p>
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="errorMessage" class="alert alert-danger mt-4">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Chart and Summary -->
+  <div *ngIf="!isLoading && !errorMessage">
+    <canvas baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [type]="barChartType"
+            [legend]="barChartLegend">
+    </canvas>
+
+    <div class="row text-center mt-4">
+      <div class="col-md-3">
+        <div class="card border-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Sales</h5>
+            <p class="card-text text-primary fw-bold">${{ totalSales }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card border-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Orders</h5>
+            <p class="card-text text-success fw-bold">{{ totalOrders }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="highestOrder">
+        <div class="card border-warning mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Highest Order</h5>
+            <p class="card-text fw-bold text-warning">
+              {{ highestOrder.name }} - ${{ highestOrder.total }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

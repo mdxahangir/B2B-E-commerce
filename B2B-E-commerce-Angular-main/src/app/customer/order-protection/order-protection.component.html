@@ -1,0 +1,273 @@
+ <!-- Main Content -->
+ <div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-header bg-white">
+                    <h4 class="fw-bold mb-0">Order Protection</h4>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Alibaba's Order Protection ensures your transactions are secure and protected from payment to delivery.
+                    </div>
+                    
+                    <h5 class="fw-bold mb-3">How Order Protection Works</h5>
+                    <div class="row text-center mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div class="protection-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h6>Secure Payment</h6>
+                            <p class="small text-muted">Your payment is held securely until you confirm receipt</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="protection-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h6>Quality Inspection</h6>
+                            <p class="small text-muted">Verify product quality before releasing payment</p>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="protection-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h6>Dispute Resolution</h6>
+                            <p class="small text-muted">Get help if the order doesn't match the description</p>
+                        </div>
+                    </div>
+                    
+                    <h5 class="fw-bold mb-3">Choose Your Protection Level</h5>
+                    
+                    <!-- Basic Protection -->
+                    <div class="protection-card p-4 mb-3 selected" onclick="selectProtection(this, 'basic')">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protectionLevel" id="basicProtection" checked>
+                            <label class="form-check-label fw-bold" for="basicProtection">
+                                Basic Order Protection (Free)
+                            </label>
+                        </div>
+                        <div class="mt-3">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Payment protection until order confirmation</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>15-day dispute resolution period</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Basic mediation services</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Protection -->
+                    <div class="protection-card p-4 mb-3" onclick="selectProtection(this, 'premium')">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protectionLevel" id="premiumProtection">
+                            <label class="form-check-label fw-bold" for="premiumProtection">
+                                Premium Order Protection ($9.99)
+                            </label>
+                        </div>
+                        <div class="mt-3">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>All Basic Protection features</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Extended 30-day dispute resolution period</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Priority customer service</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Product quality inspection service</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Escrow payment protection</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enterprise Protection -->
+                    <div class="protection-card p-4 mb-4" onclick="selectProtection(this, 'enterprise')">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="protectionLevel" id="enterpriseProtection">
+                            <label class="form-check-label fw-bold" for="enterpriseProtection">
+                                Enterprise Protection ($29.99)
+                            </label>
+                        </div>
+                        <div class="mt-3">
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>All Premium Protection features</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>60-day extended protection period</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dedicated account manager</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>On-site quality inspection</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Contract drafting assistance</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Legal consultation (2 hours)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="delivery.html" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Back to Delivery
+                        </a>
+                        <a href="payment.html" class="btn btn-orange">
+                            Continue to Payment <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="card">
+                <div class="card-header bg-white">
+                    <h5 class="fw-bold mb-0">Frequently Asked Questions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="protectionFAQ">
+                        <!-- Question 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is Order Protection?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#protectionFAQ">
+                                <div class="accordion-body">
+                                    Order Protection is a service that helps protect your payments and ensures you receive the products as described. It includes payment security, dispute resolution, and quality assurance services depending on the protection level you choose.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Question 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How does the payment protection work?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#protectionFAQ">
+                                <div class="accordion-body">
+                                    Your payment is held securely by Alibaba until you confirm that you've received the order as described. If there are any issues, you can file a dispute within the protection period to get assistance in resolving the matter.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Question 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What's the difference between the protection levels?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#protectionFAQ">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li><strong>Basic Protection</strong> (Free): Standard payment protection and dispute resolution</li>
+                                        <li><strong>Premium Protection</strong> ($9.99): Extended protection period, quality inspection, and priority service</li>
+                                        <li><strong>Enterprise Protection</strong> ($29.99): Comprehensive protection with on-site inspection and legal support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Question 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Can I change my protection level after placing the order?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#protectionFAQ">
+                                <div class="accordion-body">
+                                    You can upgrade your protection level within 7 days of placing the order. Downgrades are not permitted after order confirmation.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h6 class="fw-bold">Customer Service</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Submit a Dispute</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6 class="fw-bold">About GlobalB2B</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Terms of Use</a></li>
+                    <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h6 class="fw-bold">Stay Connected</h6>
+                <div class="mb-3">
+                    <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="text-center text-muted small">
+            © 2023 GlobalB2B. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5.3.0 JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Protection level selection
+    function selectProtection(element, level) {
+        document.querySelectorAll('.protection-card').forEach(card => {
+            card.classList.remove('selected');
+        });
+        element.classList.add('selected');
+        document.querySelector(`#${level}Protection`).checked = true;
+    }
+    
+    // Initialize with basic protection selected
+    document.addEventListener('DOMContentLoaded', function() {
+        const basicProtection = document.querySelector('.protection-card.selected');
+        if (basicProtection) {
+            basicProtection.querySelector('input[type="radio"]').checked = true;
+        }
+    });
+</script>

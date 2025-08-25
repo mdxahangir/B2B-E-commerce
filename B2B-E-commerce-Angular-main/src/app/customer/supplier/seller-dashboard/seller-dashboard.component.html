@@ -1,0 +1,140 @@
+<div class="seller-dashboard">
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between h-100">
+        <!-- Logo and Toggle -->
+        <div class="d-flex align-items-center">
+          <button class="btn d-lg-none me-2" id="sidebarToggle" (click)="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <a class="navbar-brand fw-bold text-primary" href="#">
+            <i class="fas fa-store me-2"></i> B2B<span>Supplier</span>
+          </a>
+        </div>
+        
+        <!-- User Navigation -->
+        <ul class="nav user-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-envelope"></i>
+              <span class="d-none d-lg-inline">Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-bell"></i>
+              <span class="d-none d-lg-inline">Notifications</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="far fa-user-circle"></i>
+              <span class="d-none d-lg-inline">Supplier Account</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Sidebar -->
+  <aside class="main-sidebar" [class.sidebar-open]="sidebarOpen">
+    <div class="sidebar-inner">
+      <!-- User Profile -->
+      <div class="user-profile">
+        <img src="https://via.placeholder.com/80" alt="User" class="rounded-circle">
+        <h5>Supplier Name</h5>
+        <p>Premium Seller</p>
+      </div>
+      
+      <!-- Main Menu -->
+      <ul class="sidebar-menu">
+        <li class="menu-title">Main</li>
+        <li class="menu-item">
+          <a routerLink="seller-dashboard" class="menu-link active">
+            <span class="menu-icon"><i class="fas fa-tachometer-alt"></i></span>
+            <span class="menu-text">Dashboard</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Store Management</li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-store"></i></span>
+            <span class="menu-text">Storefront</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Products</li>
+        <li class="menu-item">
+          <a routerLink="products-management" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-box-open"></i></span>
+            <span class="menu-text">All Products</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="products/new" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-plus-circle"></i></span>
+            <span class="menu-text">Add Product</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="category-list" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-tags"></i></span>
+            <span class="menu-text">Categories</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a routerLink="subcategories" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-tags"></i></span>
+            <span class="menu-text">Sub Categories</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Orders</li>
+        <li class="menu-item">
+          <a routerLink="/seller-order-list" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-shopping-cart"></i></span>
+            <span class="menu-text">All Orders</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Customers</li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-users"></i></span>
+            <span class="menu-text">Buyers</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Reports</li>
+        <li class="menu-item">
+          <a routerLink="sales-report" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-chart-line"></i></span>
+            <span class="menu-text">Sales</span>
+          </a>
+        </li>
+        
+        <li class="menu-title">Settings</li>
+        <li class="menu-item">
+          <a href="#" class="menu-link">
+            <span class="menu-icon"><i class="fas fa-cog"></i></span>
+            <span class="menu-text">Account Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" [class.sidebar-open]="sidebarOpen">    
+    <router-outlet></router-outlet>
+  </main>
+</div>

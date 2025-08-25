@@ -1,0 +1,246 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "email": "admin",
+      "password": "admin123"
+    }
+  ],
+  "buyers": [],
+  "users": [
+    {
+      "id": "e1a6",
+      "country": "BD",
+      "role": "seller",
+      "email": "xyz@gmail.com",
+      "password": "admin123",
+      "companyName": "amar",
+      "firstName": "md",
+      "lastName": "jahangir",
+      "phoneCode": "880",
+      "phoneArea": "Dhaka",
+      "phoneNumber": "01796448784",
+      "agreedToTerms": true
+    },
+    {
+      "id": "4fef",
+      "country": "IN",
+      "role": "seller",
+      "email": "xyz@gmail.com",
+      "password": "admin123",
+      "companyName": "fghgf",
+      "firstName": "fghfg",
+      "lastName": "fgh",
+      "phoneCode": "880",
+      "phoneArea": "fgh",
+      "phoneNumber": "48645",
+      "agreedToTerms": true
+    }
+  ],
+  
+    "conversations": [
+      {
+        "id": 1,
+        "supplierName": "Shenzhen Electronics Co.",
+        "supplierAvatar": "https://via.placeholder.com/40",
+        "lastMessage": "Hello, we have received your inquiry about our wireless headphones...",
+        "lastMessageTime": "2023-04-01T10:30:00Z",
+        "unreadCount": 3,
+        "supplierStatus": "online",
+        "messages": [
+          {
+            "id": 1,
+            "content": "Hello, we have received your inquiry about our wireless headphones. How can I help you?",
+            "timestamp": "2023-04-01T10:30:00Z",
+            "isSent": false
+          },
+          {
+            "id": 2,
+            "content": "Hi, I'm interested in your model SM-BT200. Can you tell me the MOQ and price for 100 pieces?",
+            "timestamp": "2023-04-01T10:35:00Z",
+            "isSent": true
+          },
+          {
+            "id": 3,
+            "content": "Thank you for your interest. For 100 pieces, the price is $19.99 per unit. MOQ is 50 pieces.",
+            "timestamp": "2023-04-01T10:40:00Z",
+            "isSent": false
+          },
+          {
+            "id": 4,
+            "content": "We can offer free shipping for orders over $1000. Would you like me to prepare a quotation?",
+            "timestamp": "2023-04-01T10:41:00Z",
+            "isSent": false
+          },
+          {
+            "id": 5,
+            "content": "Yes, please send me a formal quotation. Also, what's the lead time for production and shipping?",
+            "timestamp": "2023-04-01T10:45:00Z",
+            "isSent": true
+          },
+          {
+            "id": 6,
+            "content": "Production takes 5-7 days after order confirmation. Shipping to USA takes about 15 days by sea.",
+            "timestamp": "2023-04-01T10:50:00Z",
+            "isSent": false
+          },
+          {
+            "id": 7,
+            "content": "I've attached the quotation document with all details. Please check and let me know if you have any questions.",
+            "timestamp": "2023-04-01T10:55:00Z",
+            "isSent": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "supplierName": "Guangzhou Apparel Ltd.",
+        "supplierAvatar": "https://via.placeholder.com/40",
+        "lastMessage": "Thank you for your order #12345. We will process it...",
+        "lastMessageTime": "2023-03-31T14:20:00Z",
+        "unreadCount": 0,
+        "supplierStatus": "online",
+        "messages": []
+      }
+    ],
+    
+  "paymentMethods": [
+    {
+      "id": "credit-card",
+      "title": "Credit/Debit Card",
+      "description": "Pay with Visa, Mastercard, or other cards",
+      "icon": "far fa-credit-card",
+      "active": true,
+      "showDetails": true
+    },
+    {
+      "id": "paypal",
+      "title": "PayPal",
+      "description": "Pay with your PayPal account",
+      "icon": "fab fa-paypal",
+      "iconColor": "#003087",
+      "active": false,
+      "showDetails": false
+    },
+    {
+      "id": "bank-transfer",
+      "title": "Bank Transfer",
+      "description": "Direct bank transfer",
+      "icon": "fas fa-university",
+      "iconColor": "#5c6bc0",
+      "active": false,
+      "showDetails": false
+    },
+    {
+      "id": "alipay",
+      "title": "Alipay",
+      "description": "Pay with your Alipay account",
+      "icon": "fab fa-alipay",
+      "iconColor": "#00aaee",
+      "active": false,
+      "showDetails": false
+    }
+  ],
+  "orderSummary": {
+    "subtotal": 245.00,
+    "shipping": 15.00,
+    "tax": 24.50,
+    "discount": -20.00
+  },
+
+  "stats": {
+    "revenue": 24780,
+    "orders": 1245,
+    "customers": 568,
+    "productsSold": 3456
+  },
+  "recentOrders": [
+    {
+      "id": "ORD-2023-1001",
+      "customer": "Global Trading Co.",
+      "date": "2023-06-15",
+      "amount": 1245.00,
+      "status": "completed"
+    },
+    {
+      "id": "ORD-2023-1002",
+      "customer": "Tech Solutions Ltd.",
+      "date": "2023-06-14",
+      "amount": 3780.00,
+      "status": "processing"
+    },
+    {
+      "id": "ORD-2023-1003",
+      "customer": "Office Supplies Inc.",
+      "date": "2023-06-13",
+      "amount": 890.00,
+      "status": "processing"
+    },
+    {
+      "id": "ORD-2023-1004",
+      "customer": "Electronics World",
+      "date": "2023-06-12",
+      "amount": 2150.00,
+      "status": "completed"
+    },
+    {
+      "id": "ORD-2023-1005",
+      "customer": "Gadget Store",
+      "date": "2023-06-10",
+      "amount": 1560.00,
+      "status": "cancelled"
+    }
+  ],
+  "topProducts": [
+    {
+      "name": "Wireless Earbuds",
+      "category": "Electronics",
+      "sold": 456
+    },
+    {
+      "name": "Stainless Bottle",
+      "category": "Kitchen",
+      "sold": 389
+    },
+    {
+      "name": "LED Desk Lamp",
+      "category": "Office",
+      "sold": 312
+    },
+    {
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "sold": 287
+    },
+    {
+      "name": "Smart Watch",
+      "category": "Wearables",
+      "sold": 245
+    }
+  ],
+  "recentCustomers": [
+    {
+      "name": "Global Trading Co.",
+      "joined": "2 days ago"
+    },
+    {
+      "name": "Tech Solutions Ltd.",
+      "joined": "1 week ago"
+    },
+    {
+      "name": "Office Supplies Inc.",
+      "joined": "2 weeks ago"
+    },
+    {
+      "name": "Electronics World",
+      "joined": "3 weeks ago"
+    },
+    {
+      "name": "Gadget Store",
+      "joined": "1 month ago"
+    }
+  ]
+
+
+}
+

@@ -1,0 +1,299 @@
+<div class="d-flex">
+    <!-- Sidebar -->
+    <div class="sidebar w-250 d-flex flex-column">
+        <div class="logo">
+            <i class="fas fa-store"></i> Ali<span>Seller</span>
+        </div>
+        <div class="flex-grow-1 overflow-auto p-3">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink="/dashboard">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/storefront-management">
+                        <i class="fas fa-box-open"></i> Storefront Management
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/product-listings" class="nav-link">Product Listings</a></li>
+                        <li><a routerLink="/store-customization" class="nav-link">Store Customization</a></li>
+                        <li><a routerLink="/inventory-control" class="nav-link">Inventory Control</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/order-management">
+                        <i class="fas fa-shopping-cart"></i> Order Management
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/order-processing" class="nav-link">Order Processing</a></li>
+                        <li><a routerLink="/payment-tracking" class="nav-link">Payment Tracking</a></li>
+                        <li><a routerLink="/shipping-integration" class="nav-link">Shipping Integration</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/customer-engagement">
+                        <i class="fas fa-users"></i> Customer Engagement
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/inquiry-management" class="nav-link">Inquiry Management</a></li>
+                        <li><a routerLink="/messaging-system" class="nav-link">Messaging System</a></li>
+                        <li><a routerLink="/feedback" class="nav-link">Feedback & Reviews</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/analytics">
+                        <i class="fas fa-chart-line"></i> Analytics & Insights
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/performance-petrics" class="nav-link">Performance Metrics</a></li>
+                        <li><a routerLink="/buyer-behavior" class="nav-link">Buyer Behavior</a></li>
+                        <li><a routerLink="/market-trends" class="nav-link">Market Trends</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/marketing">
+                        <i class="fas fa-bullhorn"></i> Marketing & Promotion
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/advertising-tools" class="nav-link">Advertising Tools</a></li>
+                        <li><a routerLink="/promotional-campaigns" class="nav-link">Promotional Campaigns</a></li>
+                        <li><a routerLink="/seo-optimization" class="nav-link">SEO Optimization</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/account">
+                        <i class="fas fa-user-cog"></i> Account & Compliance
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/profile-settings" class="nav-link">Profile Settings</a></li>
+                        <li><a routerLink="/verification" class="nav-link">Verification</a></li>
+                        <li><a routerLink="/compliance-monitoring" class="nav-link">Compliance Monitoring</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/support-resource">
+                        <i class="fas fa-question-circle"></i> Support & Resources
+                    </a>
+                    <ul class="sub-menu ps-4">
+                        <li><a routerLink="/help-center" class="nav-link">Help Center</a></li>
+                        <li><a routerLink="/seller-training" class="nav-link">Seller Training</a></li>
+                        <li><a routerLink="/community-forums" class="nav-link">Community Forums</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <div class="page-title">Payment Center</div>
+            <div class="user-info">
+                <div class="user-avatar">JD</div>
+                <div>John Doe</div>
+            </div>
+        </div>
+        
+        <!-- Payment Dashboard -->
+        <div class="payment-dashboard">
+            <div class="payment-card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Available Balance</div>
+                        <div class="card-value">$8,742.50</div>
+                        <div class="card-change">+8.3% from last month</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Pending Payments</div>
+                        <div class="card-value">$3,716.40</div>
+                        <div class="card-change negative">-2.1% from last month</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="payment-card">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Total Revenue</div>
+                        <div class="card-value">$12,458.90</div>
+                        <div class="card-change">+12.5% from last month</div>
+                    </div>
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Payment Tabs -->
+        <div class="payment-tabs">
+            <div class="payment-tab active">Payment History</div>
+            <div class="payment-tab">Withdrawal Records</div>
+            <div class="payment-tab">Payment Settings</div>
+        </div>
+        
+        <!-- Payment History -->
+        <div class="payment-content">
+            <div class="payment-header">
+                <div class="payment-title">Recent Payments</div>
+                <div class="payment-actions">
+                    <div class="payment-btn">
+                        <i class="fas fa-download"></i> Export
+                    </div>
+                    <div class="payment-btn primary">
+                        <i class="fas fa-plus"></i> Withdraw
+                    </div>
+                </div>
+            </div>
+            
+            <table class="payment-table">
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Date</th>
+                        <th>Order ID</th>
+                        <th>Amount</th>
+                        <th>Buyer</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="payment-id">#PY-78945</td>
+                        <td>2023-10-15</td>
+                        <td>#ORD-78451</td>
+                        <td>$245.90</td>
+                        <td>Global Trading Co.</td>
+                        <td><span class="payment-status completed">Completed</span></td>
+                        <td>
+                            <button class="payment-btn">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="payment-id">#PY-78944</td>
+                        <td>2023-10-14</td>
+                        <td>#ORD-78450</td>
+                        <td>$189.00</td>
+                        <td>Tech Solutions Ltd</td>
+                        <td><span class="payment-status completed">Completed</span></td>
+                        <td>
+                            <button class="payment-btn">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="payment-id">#PY-78943</td>
+                        <td>2023-10-13</td>
+                        <td>#ORD-78449</td>
+                        <td>$542.75</td>
+                        <td>Electro World</td>
+                        <td><span class="payment-status pending">Pending</span></td>
+                        <td>
+                            <button class="payment-btn">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="payment-id">#PY-78942</td>
+                        <td>2023-10-12</td>
+                        <td>#ORD-78448</td>
+                        <td>$98.50</td>
+                        <td>Home Goods Inc</td>
+                        <td><span class="payment-status completed">Completed</span></td>
+                        <td>
+                            <button class="payment-btn">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="payment-id">#PY-78941</td>
+                        <td>2023-10-11</td>
+                        <td>#ORD-78447</td>
+                        <td>$1,245.00</td>
+                        <td>Fashion Trends</td>
+                        <td><span class="payment-status failed">Failed</span></td>
+                        <td>
+                            <button class="payment-btn">
+                                <i class="fas fa-sync-alt"></i> Retry
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Withdrawal Section -->
+        <div class="withdrawal-section">
+            <div class="withdrawal-card">
+                <div class="payment-title">Withdraw Funds</div>
+                <div class="withdrawal-form">
+                    <div>
+                        <div class="form-group">
+                            <label>Withdrawal Amount</label>
+                            <input type="number" placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label>Available Balance</label>
+                            <input type="text" value="$8,742.50" disabled>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <select>
+                                <option>Bank Transfer</option>
+                                <option>PayPal</option>
+                                <option>Alipay</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Account Details</label>
+                            <input type="text" placeholder="Enter account information">
+                        </div>
+                    </div>
+                </div>
+                <button class="withdrawal-btn">Request Withdrawal</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple interaction for the demo
+    document.querySelectorAll('.payment-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelector('.payment-tab.active').classList.remove('active');
+            this.classList.add('active');
+            // In a real app, this would switch between content sections
+            alert('Switching to ' + this.textContent + ' section');
+        });
+    });
+    
+    document.querySelectorAll('.payment-id').forEach(el => {
+        el.addEventListener('click', () => {
+            alert('Viewing payment details for ' + el.textContent);
+        });
+    });
+    
+    document.querySelector('.withdrawal-btn').addEventListener('click', () => {
+        alert('Withdrawal request submitted');
+    });
+</script>

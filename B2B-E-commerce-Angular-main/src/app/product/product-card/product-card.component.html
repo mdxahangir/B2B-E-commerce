@@ -1,0 +1,32 @@
+
+  <!-- Card View (hidden when in table mode) -->
+  <div class="card-container" *ngIf="viewMode === 'cards'">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <div class="card-image">
+        <img [src]="product.imageUrl || 'assets/default-product.png'" [alt]="product.name">
+         <!-- <img src="assets/images/mixer.jpeg" [alt]="product.name"> -->
+        <div class="stock-badge" [class.low-stock]="product.quantity < 10">
+          {{product.quantity}} in stock
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">{{product.name}}</h3>
+        <div class="card-price">{{product.price | currency}}</div>
+        <p class="card-description">{{product.description }}</p>
+      </div>
+      <div class="card-actions">
+        <!-- <button (click)="buyProduct(product.id!)" class="btn-buy">
+          <i class="fas fa-cart"></i> 
+        </button> -
+              <button routerLink="/products/detail" class="btn-add">
+       <i class="fas fa-view"> Wiew</i> View
+      </button> -->
+      <!-- Inside product-card.component.html -->
+<a [routerLink]="['/product-detail', product.id]" class="btn btn-view">
+  View Details
+</a>
+
+
+      </div>
+    </div>
+  </div>

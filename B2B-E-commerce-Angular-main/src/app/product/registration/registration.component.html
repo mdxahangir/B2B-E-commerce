@@ -1,0 +1,120 @@
+<div class="registration-container">
+  <div class="registration-card">
+    <h2 class="text-center mb-4">Create Your Business Account</h2>
+    
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- Email -->
+      <div class="form-group mb-3">
+        <label>* Email</label>
+        <input type="email" class="form-control" formControlName="email" 
+               placeholder="Your business email" (blur)="checkEmail()">
+        <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" 
+             class="text-danger">
+          <div *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required</div>
+          <div *ngIf="registrationForm.get('email')?.errors?.['email']">Please enter a valid email</div>
+          <div *ngIf="registrationForm.get('email')?.errors?.['emailExists']">Email already exists</div>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group mb-3">
+        <label>* Password</label>
+        <input type="password" class="form-control" formControlName="password" 
+               placeholder="At least 8 characters">
+        <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" 
+             class="text-danger">
+          <div *ngIf="registrationForm.get('password')?.errors?.['required']">Password is required</div>
+          <div *ngIf="registrationForm.get('password')?.errors?.['minlength']">
+            Password must be at least 8 characters
+          </div>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group mb-3">
+        <label>* Confirm Password</label>
+        <input type="password" class="form-control" formControlName="confirmPassword" 
+               placeholder="Re-enter your password">
+        <div *ngIf="registrationForm.hasError('mismatch')" class="text-danger">
+          Passwords do not match
+        </div>
+      </div>
+
+      <!-- Country -->
+      <div class="form-group mb-3">
+        <label>Country/Region</label>
+        <select class="form-control" formControlName="country">
+          <option *ngFor="let country of countries" [value]="country.code">
+            {{country.name}}
+          </option>
+        </select>
+      </div>
+
+      <!-- Business Type -->
+      <div class="form-group mb-3">
+        <label>I want to</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="role" id="buyer" value="buyer">
+          <label class="form-check-label" for="buyer">Buy products</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="role" id="seller" value="seller">
+          <label class="form-check-label" for="seller">Sell products</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="role" id="both" value="both">
+          <label class="form-check-label" for="both">Both</label>
+        </div>
+      </div>
+
+      <!-- Company Name -->
+      <div class="form-group mb-3">
+        <label>Company Name</label>
+        <input type="text" class="form-control" formControlName="companyName" 
+               placeholder="Your company name">
+      </div>
+
+      <!-- Contact Person -->
+      <div class="row mb-3">
+        <div class="col">
+          <label>First Name</label>
+          <input type="text" class="form-control" formControlName="firstName" 
+                 placeholder="First name">
+        </div>
+        <div class="col">
+          <label>Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" 
+                 placeholder="Last name">
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group mb-3">
+        <label>Phone Number</label>
+        <div class="input-group">
+          <select class="form-control w-25" formControlName="phoneCode">
+            <option value="+1">+1 (US)</option>
+            <option value="+86">+86 (CN)</option>
+            <option value="+91">+91 (IN)</option>
+            <option value="+81">+81 (JP)</option>
+            <option value="+49">+49 (DE)</option>
+          </select>
+          <input type="text" class="form-control" formControlName="phoneNumber" 
+                 placeholder="Phone number">
+        </div>
+      </div>
+
+      <!-- Terms Agreement -->
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" formControlName="agreedToTerms" id="terms">
+        <label class="form-check-label" for="terms">
+          I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary w-100" 
+              [disabled]="registrationForm.invalid">Create Account</button>
+    </form>
+  </div>
+</div>

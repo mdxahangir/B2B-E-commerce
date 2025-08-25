@@ -1,0 +1,58 @@
+<div class="order-list-container">
+  <h2>Order List</h2>
+
+  <div *ngIf="isLoading" class="loading">
+    Loading orders...
+  </div>
+
+  <div *ngIf="!isLoading">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+          <th>Payment Status</th>
+          <th>Shipping Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.productId }}</td>
+          <td>{{ order.name }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.total | currency:'USD':'symbol':'1.2-2' }}</td>
+          <td>
+            <select [(ngModel)]="order.paymentStatus" 
+                    (change)="onPaymentStatusChange(order)"
+                    class="status-select">
+              <option *ngFor="let status of paymentStatuses" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <select [(ngModel)]="order.shippingStatus" 
+                    (change)="onShippingStatusChange(order)"
+                    class="status-select">
+              <option *ngFor="let status of shippingStatuses" [value]="status">
+                {{ status }}
+              </option>
+            </select>
+          </td>
+          <td>
+            <button class="delete-btn" (click)="deleteOrder(order.id!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="orders.length === 0" class="no-orders">
+      No orders found.
+    </div>
+  </div>
+</div>

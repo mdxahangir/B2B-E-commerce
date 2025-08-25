@@ -1,0 +1,473 @@
+<!-- Header -->
+    <div class="trade-assurance-header py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="fw-bold mb-0">Trade Assurance</h1>
+                    <p class="mb-0 text-muted">Order protection for buyers and suppliers</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="https://via.placeholder.com/300x80?text=Trade+Assurance+Logo" alt="Trade Assurance Logo" class="img-fluid" style="max-height: 80px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <!-- Benefits Section -->
+        <div class="row mb-5">
+            <div class="col-12 mb-4">
+                <h2 class="text-center">How Trade Assurance Protects You</h2>
+                <p class="text-center text-muted">Secure transactions with payment protection and quality assurance</p>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Order Protection</h4>
+                    <p>Get refunded if your order doesn't meet quality standards or isn't shipped on time.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4>Secure Payments</h4>
+                    <p>Your payment is held securely until you confirm satisfactory delivery.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="benefit-card text-center">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Dispute Resolution</h4>
+                    <p>We provide mediation services to help resolve any transaction issues.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Tabs -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-buyer-tab" data-bs-toggle="pill" data-bs-target="#pills-buyer" type="button" role="tab">I'm a Buyer</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-supplier-tab" data-bs-toggle="pill" data-bs-target="#pills-supplier" type="button" role="tab">I'm a Supplier</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Buyer Form -->
+            <div class="tab-pane fade show active" id="pills-buyer" role="tabpanel">
+                <div class="info-box">
+                    <h5><i class="fas fa-info-circle me-2"></i>Buyer Information</h5>
+                    <p class="mb-0">Complete this form to request Trade Assurance protection for your order. All fields marked with * are required.</p>
+                </div>
+
+                <form>
+                    <div class="form-section">
+                        <h3 class="form-title">Basic Information</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="buyerName" class="form-label required-field">Full Name</label>
+                                <input type="text" class="form-control" id="buyerName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="buyerCompany" class="form-label required-field">Company Name</label>
+                                <input type="text" class="form-control" id="buyerCompany" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="buyerEmail" class="form-label required-field">Email</label>
+                                <input type="email" class="form-control" id="buyerEmail" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="buyerPhone" class="form-label required-field">Phone Number</label>
+                                <input type="tel" class="form-control" id="buyerPhone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="buyerCountry" class="form-label required-field">Country/Region</label>
+                            <select class="form-select" id="buyerCountry" required>
+                                <option value="" selected disabled>Select your country</option>
+                                <option value="US">United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="CN">China</option>
+                                <option value="IN">India</option>
+                                <option value="DE">Germany</option>
+                                <!-- More countries -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Order Information</h3>
+                        <div class="mb-3">
+                            <label for="orderNumber" class="form-label required-field">Order Number</label>
+                            <input type="text" class="form-control" id="orderNumber" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productName" class="form-label required-field">Product Name</label>
+                            <input type="text" class="form-control" id="productName" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="orderAmount" class="form-label required-field">Order Amount (USD)</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="orderAmount" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="orderDate" class="form-label required-field">Order Date</label>
+                                <input type="date" class="form-control" id="orderDate" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="supplierName" class="form-label required-field">Supplier Name</label>
+                            <input type="text" class="form-control" id="supplierName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="supplierLink" class="form-label">Supplier Profile Link (if available)</label>
+                            <input type="url" class="form-control" id="supplierLink">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Protection Details</h3>
+                        <div class="mb-3">
+                            <label class="form-label required-field">Protection Type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="protectionType" id="shipmentProtection" checked>
+                                <label class="form-check-label" for="shipmentProtection">
+                                    Shipment Protection (covers non-delivery or late delivery)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="protectionType" id="qualityProtection">
+                                <label class="form-check-label" for="qualityProtection">
+                                    Quality Protection (covers product quality issues)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="protectionType" id="bothProtection">
+                                <label class="form-check-label" for="bothProtection">
+                                    Both Shipment and Quality Protection
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="protectionAmount" class="form-label required-field">Protection Amount (USD)</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="protectionAmount" required>
+                                <span class="input-group-text">(Up to 100% of order value)</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expectedDate" class="form-label required-field">Expected Delivery Date</label>
+                            <input type="date" class="form-control" id="expectedDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Terms & Agreement</h3>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Trade Assurance Terms</a>
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="authorizePayment" required>
+                            <label class="form-check-label" for="authorizePayment">
+                                I authorize GlobalB2B to hold my payment until order completion
+                            </label>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-orange btn-lg">Submit Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Supplier Form -->
+            <div class="tab-pane fade" id="pills-supplier" role="tabpanel">
+                <div class="info-box">
+                    <h5><i class="fas fa-info-circle me-2"></i>Supplier Information</h5>
+                    <p class="mb-0">Complete this form to enroll in the Trade Assurance program. All fields marked with * are required.</p>
+                </div>
+
+                <form>
+                    <div class="form-section">
+                        <h3 class="form-title">Company Information</h3>
+                        <div class="mb-3">
+                            <label for="supplierCompany" class="form-label required-field">Company Name</label>
+                            <input type="text" class="form-control" id="supplierCompany" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="businessLicense" class="form-label required-field">Business License Number</label>
+                                <input type="text" class="form-control" id="businessLicense" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="companyType" class="form-label required-field">Company Type</label>
+                                <select class="form-select" id="companyType" required>
+                                    <option value="" selected disabled>Select company type</option>
+                                    <option value="manufacturer">Manufacturer</option>
+                                    <option value="trading">Trading Company</option>
+                                    <option value="wholesaler">Wholesaler</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="companyAddress" class="form-label required-field">Company Address</label>
+                            <textarea class="form-control" id="companyAddress" rows="2" required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="supplierCountry" class="form-label required-field">Country/Region</label>
+                                <select class="form-select" id="supplierCountry" required>
+                                    <option value="" selected disabled>Select your country</option>
+                                    <option value="CN">China</option>
+                                    <option value="US">United States</option>
+                                    <option value="IN">India</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <!-- More countries -->
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="yearsInBusiness" class="form-label required-field">Years in Business</label>
+                                <select class="form-select" id="yearsInBusiness" required>
+                                    <option value="" selected disabled>Select years</option>
+                                    <option value="1">1 year</option>
+                                    <option value="2-5">2-5 years</option>
+                                    <option value="5-10">5-10 years</option>
+                                    <option value="10+">10+ years</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Contact Information</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactName" class="form-label required-field">Contact Person</label>
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactPosition" class="form-label required-field">Position</label>
+                                <input type="text" class="form-control" id="contactPosition" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="contactEmail" class="form-label required-field">Email</label>
+                                <input type="email" class="form-control" id="contactEmail" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="contactPhone" class="form-label required-field">Phone Number</label>
+                                <input type="tel" class="form-control" id="contactPhone" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="website" class="form-label">Company Website</label>
+                            <input type="url" class="form-control" id="website" placeholder="https://">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Business Information</h3>
+                        <div class="mb-3">
+                            <label for="mainProducts" class="form-label required-field">Main Products/Services</label>
+                            <textarea class="form-control" id="mainProducts" rows="3" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="annualRevenue" class="form-label">Annual Revenue (USD)</label>
+                            <select class="form-select" id="annualRevenue">
+                                <option value="" selected disabled>Select range</option>
+                                <option value="<1m">Less than $1 million</option>
+                                <option value="1-5m">$1-5 million</option>
+                                <option value="5-10m">$5-10 million</option>
+                                <option value="10-50m">$10-50 million</option>
+                                <option value="50m+">$50 million+</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exportMarkets" class="form-label">Main Export Markets</label>
+                            <select class="form-select" id="exportMarkets" multiple>
+                                <option value="NA">North America</option>
+                                <option value="EU">Europe</option>
+                                <option value="AS">Asia</option>
+                                <option value="ME">Middle East</option>
+                                <option value="AF">Africa</option>
+                                <option value="SA">South America</option>
+                                <option value="OC">Oceania</option>
+                            </select>
+                            <small class="text-muted">Hold Ctrl/Cmd to select multiple</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Trade Assurance Details</h3>
+                        <div class="mb-3">
+                            <label class="form-label required-field">Trade Assurance Coverage</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="coverageType" id="basicCoverage" checked>
+                                <label class="form-check-label" for="basicCoverage">
+                                    Basic Coverage (up to $10,000 per order)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="coverageType" id="premiumCoverage">
+                                <label class="form-check-label" for="premiumCoverage">
+                                    Premium Coverage (up to $50,000 per order) - Additional verification required
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="expectedOrders" class="form-label">Estimated Monthly Orders with Trade Assurance</label>
+                            <select class="form-select" id="expectedOrders">
+                                <option value="" selected disabled>Select estimate</option>
+                                <option value="1-5">1-5 orders</option>
+                                <option value="5-10">5-10 orders</option>
+                                <option value="10-20">10-20 orders</option>
+                                <option value="20+">20+ orders</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bankInfo" class="form-label required-field">Bank Account Information for Payments</label>
+                            <textarea class="form-control" id="bankInfo" rows="3" required></textarea>
+                            <small class="text-muted">Include bank name, account number, SWIFT code, etc.</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Documents Upload</h3>
+                        <div class="mb-3">
+                            <label for="licenseUpload" class="form-label required-field">Business License</label>
+                            <input class="form-control" type="file" id="licenseUpload" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="certificateUpload" class="form-label">Quality Certificates (ISO, etc.)</label>
+                            <input class="form-control" type="file" id="certificateUpload" multiple>
+                        </div>
+                        <div class="mb-3">
+                            <label for="otherDocuments" class="form-label">Other Supporting Documents</label>
+                            <input class="form-control" type="file" id="otherDocuments" multiple>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="form-title">Terms & Agreement</h3>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="supplierAgreeTerms" required>
+                            <label class="form-check-label" for="supplierAgreeTerms">
+                                I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal">Trade Assurance Terms</a> and <a href="#">Supplier Agreement</a>
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="authorizeVerification" required>
+                            <label class="form-check-label" for="authorizeVerification">
+                                I authorize GlobalB2B to verify my business information
+                            </label>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-orange btn-lg">Submit Application</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Trade Assurance Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>1. Overview</h6>
+                    <p>The GlobalB2B Trade Assurance program is designed to protect buyers and suppliers in international trade transactions. By participating in this program, you agree to the following terms and conditions.</p>
+                    
+                    <h6>2. Buyer Protection</h6>
+                    <p>Buyers are protected against:</p>
+                    <ul>
+                        <li>Non-delivery of goods</li>
+                        <li>Significant delay in delivery (beyond agreed timeframe)</li>
+                        <li>Quality issues that don't match product specifications</li>
+                    </ul>
+                    
+                    <h6>3. Supplier Requirements</h6>
+                    <p>Suppliers must:</p>
+                    <ul>
+                        <li>Provide accurate product descriptions</li>
+                        <li>Meet agreed delivery timelines</li>
+                        <li>Maintain quality standards as specified</li>
+                        <li>Cooperate with dispute resolution processes</li>
+                    </ul>
+                    
+                    <h6>4. Dispute Resolution</h6>
+                    <p>In case of disputes:</p>
+                    <ul>
+                        <li>Both parties must attempt to resolve the issue directly first</li>
+                        <li>GlobalB2B will mediate if resolution isn't reached within 7 days</li>
+                        <li>Decisions by GlobalB2B mediators are binding for payment release</li>
+                    </ul>
+                    
+                    <h6>5. Fees and Payments</h6>
+                    <p>The Trade Assurance program is free for buyers. Suppliers pay a small service fee (1-3% of transaction value) only when they receive payment for a Trade Assurance order.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Customer Service</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Submit a Dispute</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>About GlobalB2B</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms of Use</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Stay Connected</h5>
+                    <div class="mb-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">© 2023 GlobalB2B. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>

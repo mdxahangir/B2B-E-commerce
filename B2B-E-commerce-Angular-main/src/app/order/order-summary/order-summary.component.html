@@ -1,0 +1,79 @@
+<div class="container">
+
+  <h2>Order Summaries</h2>
+
+  <form (ngSubmit)="onSubmit()" #orderForm="ngForm">
+
+    <div>
+      <label>Product ID:</label>
+      <input type="number" [(ngModel)]="selectedOrder.productId" name="productId" required />
+    </div>
+
+    <div>
+      <label>Product Name:</label>
+      <input type="text" [(ngModel)]="selectedOrder.name" name="productName" required />
+    </div>
+
+    <div>
+      <label>Quantity:</label>
+      <input type="number" [(ngModel)]="selectedOrder.quantity" name="quantity" required />
+    </div>
+
+    <div>
+      <label>Total Price:</label>
+      <input type="number" step="0.01" [(ngModel)]="selectedOrder.total" name="totalPrice" required />
+    </div>
+
+    <div>
+      <label>Payment Status:</label>
+      <select [(ngModel)]="selectedOrder.paymentStatus" name="paymentStatus" required>
+        <option *ngFor="let status of paymentStatuses" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Shipping Status:</label>
+      <select [(ngModel)]="selectedOrder.shippingStatus" name="shippingStatus" required>
+        <option *ngFor="let status of shippingStatuses" [value]="status">{{ status }}</option>
+      </select>
+    </div>
+
+    <button type="submit">{{ isEditMode ? 'Update' : 'Create' }}</button>
+    <button type="button" (click)="resetForm()">Reset</button>
+
+  </form>
+
+  <hr />
+
+  <h3>Existing Orders</h3>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Payment Status</th>
+        <th>Shipping Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orderSummaries">
+        <td>{{ order.id }}</td>
+        <td>{{ order.productId }}</td>
+        <td>{{ order.name }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>{{ order.total | number:'1.2-2' }}</td>
+        <td>{{ order.paymentStatus }}</td>
+        <td>{{ order.shippingStatus }}</td>
+        <td>
+          <button (click)="selectOrder(order)">Edit</button>
+          <button (click)="deleteOrder(order.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

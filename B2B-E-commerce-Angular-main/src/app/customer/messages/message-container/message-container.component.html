@@ -1,0 +1,113 @@
+<div class="message-container">
+  <!-- Message Header -->
+  <div class="message-header d-flex justify-content-between align-items-center">
+    <h5 class="mb-0"><i class="fas fa-comments me-2"></i> Messages</h5>
+    <div class="d-flex">
+      <button class="btn btn-sm btn-outline-secondary me-2">
+        <i class="fas fa-cog"></i> Settings
+      </button>
+      <button class="btn btn-sm btn-outline-secondary">
+        <i class="fas fa-ellipsis-v"></i>
+      </button>
+    </div>
+  </div>
+  
+  <div class="row g-0">
+    <!-- Left Sidebar - Conversations -->
+    <div class="col-md-4 message-sidebar">
+      <!-- Search Box -->
+      <div class="p-3 border-bottom">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" class="form-control" placeholder="Search messages...">
+        </div>
+      </div>
+      
+      <!-- Conversation List -->
+      <div class="conversation-item" 
+           *ngFor="let conversation of conversations" 
+           [class.active]="selectedConversation?.id === conversation.id"
+           (click)="selectConversation(conversation.id)">
+        <!-- POTENTIAL ERROR: Make sure 'conversations' is properly initialized in your component -->
+        <div class="d-flex justify-content-between align-items-start">
+          <div class="d-flex">
+            <img [src]="conversation.supplierAvatar" alt="Supplier" class="conversation-avatar me-3">
+            <!-- POTENTIAL ERROR: Verify these properties exist in your Conversation model -->
+            <div>
+              <h6 class="mb-1">{{ conversation.supplierName }}</h6>
+              <div class="message-preview">{{ conversation.lastMessage }}</div>
+            </div>
+          </div>
+          <div class="text-end">
+            <div class="message-time">{{ conversation.lastMessageTime | date:'shortTime' }}</div>
+            <div class="unread-badge mt-1" *ngIf="conversation.unreadCount > 0">
+              {{ conversation.unreadCount }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Content - Message Area -->
+    <div class="col-md-8" *ngIf="selectedConversation">
+      <!-- POTENTIAL ERROR: Ensure selectedConversation is properly initialized -->
+      <div class="message-content">
+        <!-- Message Toolbar -->
+        <div class="message-toolbar d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img [src]="selectedConversation.supplierAvatar" alt="Supplier" class="conversation-avatar me-3">
+            <div>
+              <h6 class="mb-0">{{ selectedConversation.supplierName }}</h6>
+              <small class="text-muted">Gold Supplier · Online</small>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-outline-secondary me-2">
+              <i class="fas fa-phone"></i> Call
+            </button>
+            <button class="btn btn-sm btn-outline-secondary">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+          </div>
+        </div>
+        
+        <!-- Message History -->
+        <div class="message-history">
+          <div class="message-bubble" 
+               *ngFor="let message of selectedConversation.messages">
+               <!-- POTENTIAL ERROR: Verify messages array exists in selectedConversation -->
+               [class.received]="!message.isSent"
+               [class.sent]="message.isSent">
+            <div>{{ message.content }}</div>
+            <div class="message-bubble-time">{{ message.timestamp | date:'shortTime' }}</div>
+          </div>
+        </div>
+        
+        <!-- Message Input Area -->
+        <div class="message-input-area">
+          <div class="d-flex align-items-center mb-3">
+            <button class="attachment-btn me-2">
+              <i class="fas fa-paperclip"></i>
+            </button>
+            <button class="attachment-btn me-2">
+              <i class="fas fa-smile"></i>
+            </button>
+            <button class="attachment-btn">
+              <i class="fas fa-image"></i>
+            </button>
+          </div>
+          <div class="input-group">
+            <textarea class="form-control" rows="2" placeholder="Type your message here..."
+                      [(ngModel)]="newMessageContent">
+                      <!-- POTENTIAL ERROR: Requires FormsModule import -->
+            </textarea>
+            <button class="btn btn-alibaba" type="button" (click)="sendMessage()">
+              <!-- POTENTIAL ERROR: Ensure sendMessage() exists in component -->
+              <i class="fas fa-paper-plane"></i> Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,437 @@
+ <!-- Header -->
+    <div class="ready-to-ship-header py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-2 mb-md-0">Ready to Ship Products</h2>
+                    <p class="mb-0 text-muted d-none d-md-block">Source products that can be shipped immediately</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search ready to ship products...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-lg-3 mb-4">
+                <div class="card filter-card">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Filters</h5>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Supplier Types</h6>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="verifiedSupplier" checked>
+                                <label class="form-check-label" for="verifiedSupplier">
+                                    <span class="verified-badge me-1">Verified</span> Supplier
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="goldSupplier" checked>
+                                <label class="form-check-label" for="goldSupplier">
+                                    <span class="gold-badge me-1">Gold</span> Supplier
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="assessedSupplier">
+                                <label class="form-check-label" for="assessedSupplier">
+                                    <span class="badge bg-primary me-1">Assessed</span> Supplier
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Product Type</h6>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="inStock" checked>
+                                <label class="form-check-label" for="inStock">In Stock</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="oemAvailable">
+                                <label class="form-check-label" for="oemAvailable">OEM Available</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="customizable">
+                                <label class="form-check-label" for="customizable">Customizable</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Price Range (USD)</h6>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="number" class="form-control" placeholder="Min" value="0">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="form-control" placeholder="Max" value="10000">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Shipping From</h6>
+                            <select class="form-select mb-2">
+                                <option selected>All Countries</option>
+                                <option>China</option>
+                                <option>United States</option>
+                                <option>India</option>
+                                <option>Germany</option>
+                            </select>
+                            <select class="form-select">
+                                <option selected>All Ports</option>
+                                <option>Shanghai</option>
+                                <option>Shenzhen</option>
+                                <option>Los Angeles</option>
+                                <option>Hamburg</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Shipping To</h6>
+                            <select class="form-select">
+                                <option selected>All Countries</option>
+                                <option>United States</option>
+                                <option>United Kingdom</option>
+                                <option>Germany</option>
+                                <option>Australia</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3">Shipping Method</h6>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="expressShipping">
+                                <label class="form-check-label" for="expressShipping">Express (3-7 days)</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="airShipping">
+                                <label class="form-check-label" for="airShipping">Air (7-15 days)</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="seaShipping">
+                                <label class="form-check-label" for="seaShipping">Sea (15-45 days)</label>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-orange w-100">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product List -->
+            <div class="col-lg-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div class="text-muted">Showing 1-24 of 1,248 ready to ship products</div>
+                    <div class="d-flex">
+                        <div class="me-3">
+                            <span class="me-2">Sort by:</span>
+                            <select class="form-select form-select-sm d-inline-block w-auto">
+                                <option selected>Recommended</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest Arrivals</option>
+                                <option>Most Orders</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Product 1 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Wireless Bluetooth Earbuds</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-muted ms-1">(128)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$12.50 - $15.80</span>
+                                    <span class="text-muted small">/ pair</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 500+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Shenzhen Tech Co.</span>
+                                    <span class="verified-badge ms-2">Verified</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Stainless Steel Water Bottle</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="text-muted ms-1">(89)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$3.20 - $5.50</span>
+                                    <span class="text-muted small">/ piece</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 1000+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Guangdong Housewares</span>
+                                    <span class="verified-badge ms-2">Verified</span>
+                                    <span class="gold-badge ms-2">Gold</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">LED Strip Lights 5M</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="text-muted ms-1">(256)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$8.90 - $12.00</span>
+                                    <span class="text-muted small">/ roll</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 200+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Zhejiang Lighting</span>
+                                    <span class="gold-badge ms-2">Gold</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Portable Power Bank 10000mAh</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-muted ms-1">(187)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$9.80 - $14.50</span>
+                                    <span class="text-muted small">/ piece</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 300+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Shenzhen Electronics</span>
+                                    <span class="verified-badge ms-2">Verified</span>
+                                    <span class="gold-badge ms-2">Gold</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Yoga Mat Non-Slip</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="text-muted ms-1">(76)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$6.50 - $8.90</span>
+                                    <span class="text-muted small">/ piece</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 800+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Fujian Sports Co.</span>
+                                    <span class="verified-badge ms-2">Verified</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="col-md-6 col-xl-4 mb-4">
+                        <div class="card product-card h-100">
+                            <div class="product-img-container position-relative">
+                                <img src="https://via.placeholder.com/300x300?text=Product+Image" class="product-img" alt="Product Image">
+                                <span class="ready-to-ship-badge">Ready to Ship</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Smart Watch with Heart Rate Monitor</h5>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="text-muted ms-1">(342)</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="price">$25.00 - $35.00</span>
+                                    <span class="text-muted small">/ piece</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="text-muted small"><i class="fas fa-box me-1"></i> 150+ pieces available</span>
+                                    <span class="text-muted small"><i class="fas fa-check-circle text-success me-1"></i> In stock</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/30x30?text=Logo" class="rounded-circle me-2" width="24" height="24" alt="Supplier Logo">
+                                    <span class="small">Guangdong Tech Ltd</span>
+                                    <span class="verified-badge ms-2">Verified</span>
+                                    <span class="gold-badge ms-2">Gold</span>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
+                                    <a href="#" class="btn btn-orange btn-sm">Contact Supplier</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-bold">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Submit a Dispute</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-bold">About GlobalB2B</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Terms of Use</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-bold">Stay Connected</h6>
+                    <div class="mb-3">
+                        <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none text-muted me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center text-muted small">
+                © 2023 GlobalB2B. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+   

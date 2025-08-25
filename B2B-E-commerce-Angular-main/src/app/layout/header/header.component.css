@@ -1,0 +1,131 @@
+
+        /* Custom styles */
+        .navbar-alibaba {
+            background-color: #FF6A00;
+        }
+        
+        .search-box {
+            flex-grow: 1;
+            max-width: 600px;
+        }
+        
+        .search-input {
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+        }
+        
+        .search-btn {
+            background-color: #FF5100;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            border-left: none;
+        }
+        
+        .search-btn:hover {
+            background-color: #E04800;
+        }
+        
+        .country-selector, .language-selector {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            display: inline-block;
+        }
+        
+        .country-selector:hover, .language-selector:hover {
+            color: #f0f0f0;
+        }
+        
+        .dropdown-menu-alibaba {
+            min-width: 200px;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1199.98px) {
+            /* MD screens */
+            .search-box {
+                max-width: 400px;
+            }
+            
+            .navbar-brand img {
+                height: 30px;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            /* SM screens */
+            .search-box {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0;
+            }
+            
+            .navbar-collapse {
+                margin-top: 10px;
+            }
+            
+            .nav-item {
+                padding: 5px 0;
+            }
+            
+            .country-selector, .language-selector {
+                padding: 5px 8px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            /* XS screens */
+            .navbar-brand img {
+                height: 25px;
+            }
+            
+            .btn-outline-light {
+                padding: 5px 8px;
+                font-size: 14px;
+            }
+        }
+
+
+       
+    .btn-orange {
+        background-color: #FF6A00;
+        color: white;
+    }
+    .btn-orange:hover {
+        background-color: #e05d00;
+        color: white;
+    }
+    .mega-menu {
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #333;
+    }
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #FF6A00;
+    }
+    .dropdown-item:hover {
+        color: #FF6A00;
+        background-color: #fff9f5;
+    }
+    .bg-light {
+        background-color: #f8f9fa!important;
+    }

@@ -1,0 +1,142 @@
+:root {
+            --alibaba-primary: #FF6A00;
+            --alibaba-secondary: #FFE9D9;
+            --alibaba-dark: #1C1C1C;
+            --alibaba-light: #F7F7F7;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        .sidebar {
+            background-color: white;
+            height: 100vh;
+            position: fixed;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar .nav-link {
+            color: var(--alibaba-dark);
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar .nav-link:hover, .sidebar .nav-link.active {
+            background-color: var(--alibaba-secondary);
+            color: var(--alibaba-primary);
+        }
+        
+        .sidebar .nav-link i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        
+        .card-header {
+            background-color: white;
+            border-bottom: 1px solid #eee;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background-color: var(--alibaba-primary);
+            border-color: var(--alibaba-primary);
+        }
+        
+        .btn-outline-primary {
+            color: var(--alibaba-primary);
+            border-color: var(--alibaba-primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--alibaba-primary);
+            color: white;
+        }
+        
+        .table th {
+            font-weight: 500;
+            color: #666;
+            background-color: #f9f9f9;
+        }
+        
+        .badge-status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: normal;
+        }
+        
+        .badge-active {
+            background-color: #E6F7EE;
+            color: #00A854;
+        }
+        
+        .badge-draft {
+            background-color: #FFF2E8;
+            color: #FA8C16;
+        }
+        
+        .badge-rejected {
+            background-color: #FFF1F0;
+            color: #F5222D;
+        }
+        
+        .product-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .action-btn {
+            padding: 5px 10px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        
+        .search-box {
+            position: relative;
+        }
+        
+        .search-box input {
+            padding-left: 35px;
+            border-radius: 20px;
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            color: #999;
+        }
+        
+        .logo {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 15px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }

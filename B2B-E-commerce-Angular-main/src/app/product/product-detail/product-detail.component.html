@@ -1,0 +1,214 @@
+<!-- <div class="product-detail-container">
+  <div *ngIf="isLoading" class="loading">
+    <i class="fas fa-spinner fa-spin"></i> Loading product details...
+  </div>
+  
+  <div *ngIf="addToCartSuccess" class="alert alert-success">
+    <i class="fas fa-check-circle"></i> Product added to cart successfully!
+  </div>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+  </div>
+
+  <div *ngIf="product && !isLoading" class="product-detail">
+    <div class="product-header">
+      <h2>{{ product.name }}</h2>
+      <div class="product-content">
+        <div class="product-image">
+          <img [src]="product.imageUrl || 'assets/default-product.png'" [alt]="product.name">
+        </div>
+
+        <div class="product-info">
+          <div class="info-row">
+            <span class="label">ID:</span>
+            <span class="value">{{ product.id }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Description:</span>
+            <span class="value">{{ product.description }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Category:</span>
+            <span class="value">
+              {{ product.productCategory?.name || 'N/A' }}
+              <span *ngIf="product.productSubCategory"> / {{ product.productSubCategory?.name }}</span>
+            </span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Price:</span>
+            <span class="value">{{ product.price | currency }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Stock Quantity:</span>
+            <span class="value">{{ product.quantity }}</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Created By:</span>
+            <span class="value">{{ product.createdByName }} ({{ product.createdByCode }})</span>
+          </div>
+
+          <div class="info-row">
+            <span class="label">Last Updated:</span>
+            <span class="value">{{ product.updateAt | date:'medium' }}</span>
+          </div>
+
+          <div class="product-actions">
+            <button [routerLink]="['/cart', product.id]" (click)="addToCart()" class="btn btn-primary" [disabled]="isAddingToCart">
+              <i class="fas fa-shopping-cart"></i>
+              {{ isAddingToCart ? 'Adding...' : 'Add to Cart' }}
+            </button>
+
+             <div class="product-actions mt-3 d-flex gap-3"> -->
+        <!-- Add to Wishlist -->
+
+        
+        <!-- Send Message --><!---[routerLink]="['/message', product.supplierId]"--->
+        <!-- <a class="btn btn-outline-primary">
+          <i class="fas fa-envelope"></i> Message
+        </a>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Review & Rating Section -->
+<!-- <div class="product-review-container mt-4">
+  <h3>Product Reviews & Ratings</h3>
+
+  <div *ngIf="averageRating !== null" class="mb-2">
+    <strong>Average Rating:</strong> {{ averageRating }} / 5
+  </div>
+
+  <form (ngSubmit)="submitReview()" class="mb-3">
+    <div class="mb-2">
+      <label>Rating:</label>
+      <select [(ngModel)]="newReview.rating" name="rating" required class="form-select">
+        <option *ngFor="let r of [1,2,3,4,5]" [value]="r">{{ r }}</option>
+      </select>
+    </div>
+
+    <div class="mb-2">
+      <label>Comment:</label>
+      <textarea [(ngModel)]="newReview.comment" name="comment" required class="form-control"></textarea>
+    </div>
+
+    <div class="mb-2">
+      <label>Your Name:</label>
+      <input type="text" [(ngModel)]="newReview.createdBy" name="createdBy" required class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+  </form>
+
+  <div *ngIf="reviews.length > 0; else noReviews">
+    <ul class="list-group">
+      <li *ngFor="let review of reviews" class="list-group-item">
+        <strong>{{ review.createdBy }}</strong> ({{ review.rating }}/5)
+        <p>{{ review.comment }}</p>
+        <small>{{ review.createdAt | date:'medium' }}</small>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noReviews>
+    <p>No reviews for this product yet.</p>
+  </ng-template>
+</div> -->
+<div class="product-detail-container">
+  <div *ngIf="isLoading" class="loading">
+    <i class="fas fa-spinner fa-spin"></i> Loading product details...
+  </div>
+
+  <div *ngIf="addToCartSuccess" class="alert alert-success">
+    <i class="fas fa-check-circle"></i> Product added to cart successfully!
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+  </div>
+
+  <div *ngIf="product && !isLoading" class="product-detail">
+    <div class="product-header">
+      <h2>{{ product.name }}</h2>
+      <div class="product-content">
+        <div class="product-image">
+          <img [src]="product.imageUrl || 'assets/C:\Users\User\OneDrive\Desktop\NEW\angular\src\assets\images\mixer.jpeg'" [alt]="product.name">
+        </div>
+        <div class="product-info">
+          <div class="info-row"><span class="label">ID:</span><span class="value">{{ product.id }}</span></div>
+          <div class="info-row"><span class="label">Description:</span><span class="value">{{ product.description }}</span></div>
+          <div class="info-row">
+            <span class="label">Category:</span>
+            <span class="value">
+              {{ product.productCategory?.name || 'N/A' }}
+              <span *ngIf="product.productSubCategory"> / {{ product.productSubCategory?.name }}</span>
+            </span>
+          </div>
+          <div class="info-row"><span class="label">Price:</span><span class="value">{{ product.price | currency }}</span></div>
+          <div class="info-row"><span class="label">Stock Quantity:</span><span class="value">{{ product.quantity }}</span></div>
+          <div class="info-row"><span class="label">Created By:</span><span class="value">{{ product.createdByName }} ({{ product.createdByCode }})</span></div>
+          <div class="info-row"><span class="label">Last Updated:</span><span class="value">{{ product.updateAt | date:'medium' }}</span></div>
+          <div class="product-actions">
+            <button (click)="addToCart()" class="btn btn-primary" [disabled]="isAddingToCart">
+              <i class="fas fa-shopping-cart"></i> {{ isAddingToCart ? 'Adding...' : 'Add to Cart' }}
+            </button>
+                        <button (click)="addToWishList()" class="btn btn-outline-primary" [disabled]="isAddingToWishList">
+  <i class="fas fa-heart"></i> {{ isAddingToWishList ? 'Adding...' : 'Add to Wish List' }}
+</button>
+
+                        <button (click)="addToCart()" class="btn btn-primary" [disabled]="isAddingToCart">
+              <i class="fas fa-shopping-cart"></i> {{ isAddingToCart ? 'Adding...' : 'Message' }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Review & Rating Section -->
+<div class="product-review-container mt-4">
+  <h3>Product Reviews & Ratings</h3>
+
+  <div *ngIf="averageRating !== null" class="mb-2">
+    <strong>Average Rating:</strong> {{ averageRating }} / 5
+  </div>
+
+  <!-- Review Form -->
+  <form (ngSubmit)="submitReview()" class="mb-3">
+    <div class="mb-2">
+      <label>Rating:</label>
+      <select [(ngModel)]="newReview.rating" name="rating" required class="form-select">
+        <option *ngFor="let r of [1,2,3,4,5]" [value]="r">{{ r }}</option>
+      </select>
+    </div>
+    <div class="mb-2">
+      <label>Comment:</label>
+      <textarea [(ngModel)]="newReview.comment" name="comment" required class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+  </form>
+
+  <!-- Reviews List -->
+  <div *ngIf="reviews.length > 0; else noReviews">
+    <ul class="list-group">
+      <li *ngFor="let review of reviews" class="list-group-item">
+        <strong>{{ review.createdBy?.firstName }} {{ review.createdBy?.lastName }}</strong> ({{ review.rating }}/5)
+        <p>{{ review.comment }}</p>
+        <small>{{ review.createdAt | date:'medium' }}</small>
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #noReviews>
+    <p>No reviews for this product yet.</p>
+  </ng-template>
+</div>

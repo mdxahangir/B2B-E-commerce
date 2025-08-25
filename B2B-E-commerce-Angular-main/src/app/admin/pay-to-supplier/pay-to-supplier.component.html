@@ -1,0 +1,78 @@
+<div class="bg-gray-100 font-sans antialiased min-h-screen py-8">
+  <div class="container mx-auto px-4">
+    <h1 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Supplier Payment</h1>
+
+    <div *ngIf="isLoading && !order" class="text-center py-8">
+      <p>Loading order details...</p>
+    </div>
+
+    <div *ngIf="order" class="space-y-8">
+      <!-- Order Details Section (unchanged) -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Order Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- All order detail fields remain the same -->
+        </div>
+      </div>
+
+      <!-- Payment Form Section with null checks -->
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Payment Details</h2>
+        <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="payment-method" class="block text-sm font-medium text-gray-700">Payment Method</label>
+              <select 
+                id="payment-method" 
+                formControlName="paymentMethod" 
+                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                [class.border-red-300]="paymentForm.get('paymentMethod')?.invalid && paymentForm.get('paymentMethod')?.touched"
+                [class.border-gray-300]="!paymentForm.get('paymentMethod')?.invalid || !paymentForm.get('paymentMethod')?.touched"
+              >
+                <option value="">Select Method</option>
+                <option value="bank-transfer">Bank Transfer</option>
+                <option value="paypal">PayPal</option>
+                <option value="credit-card">Credit Card</option>
+              </select>
+              <div *ngIf="paymentForm.get('paymentMethod')?.invalid && paymentForm.get('paymentMethod')?.touched" class="text-red-500 text-xs mt-1">
+                Payment method is required
+              </div>
+            </div>
+            <div>
+              <label for="transaction-id" class="block text-sm font-medium text-gray-700">Transaction ID</label>
+              <input 
+                type="text" 
+                id="transaction-id" 
+                formControlName="transactionId" 
+                class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                [class.border-red-300]="paymentForm.get('transactionId')?.invalid && paymentForm.get('transactionId')?.touched"
+                [class.border-gray-300]="!paymentForm.get('transactionId')?.invalid || !paymentForm.get('transactionId')?.touched"
+                placeholder="Enter ID"
+              >
+              <div *ngIf="paymentForm.get('transactionId')?.invalid && paymentForm.get('transactionId')?.touched" class="text-red-500 text-xs mt-1">
+                Transaction ID is required
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <button 
+              type="submit" 
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              [disabled]="paymentForm.invalid || isLoading || paymentCompleted"
+            >
+              <span *ngIf="isLoading">
+                Processing...
+              </span>
+              <span *ngIf="!isLoading">
+                Pay Supplier
+              </span>
+            </button>
+            <div *ngIf="paymentMessage" class="mt-4 p-3 rounded-md bg-yellow-50">
+              <p class="text-yellow-700 font-medium">{{ paymentMessage }}</p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

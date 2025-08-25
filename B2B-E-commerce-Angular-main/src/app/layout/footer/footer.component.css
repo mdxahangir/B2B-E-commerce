@@ -1,0 +1,19 @@
+ /* Custom Styles */
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .product-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .banner-section {
+            background: linear-gradient(135deg, #FF6A00, #FF9E00);
+        }
+        .trust-badge {
+            width: 80px;
+            height: 80px;
+        }
+        .fs-small {
+            font-size: 0.85rem;
+        }

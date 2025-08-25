@@ -1,0 +1,39 @@
+.protection-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.protection-card:hover {
+    border-color: #f85606;
+    box-shadow: 0 0 10px rgba(248, 86, 6, 0.1);
+}
+.protection-card.selected {
+    border: 2px solid #f85606;
+    background-color: rgba(248, 86, 6, 0.05);
+}
+.btn-orange {
+    background-color: #f85606;
+    color: white;
+}
+.btn-orange:hover {
+    background-color: #e04d05;
+    color: white;
+}
+.text-orange {
+    color: #f85606;
+}
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.protection-icon {
+    font-size: 2rem;
+    color: #f85606;
+    margin-bottom: 1rem;
+}
+.benefit-item {
+    margin-bottom: 0.5rem;
+}
+.benefit-item i {
+    color: #28a745;
+    margin-right: 0.5rem;
+}
