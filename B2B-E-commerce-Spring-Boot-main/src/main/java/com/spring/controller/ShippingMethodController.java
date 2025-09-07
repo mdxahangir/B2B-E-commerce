@@ -11,25 +11,24 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/shipping-methods")
-@CrossOrigin(origins = "http://localhost:4200")// Angular বা অন্য ক্লায়েন্ট থেকে অ্যাক্সেস করার জন্য
+@CrossOrigin(origins = "http://localhost:4200")
 public class ShippingMethodController {
 
     @Autowired
     private ShippingMethodRepository shippingMethodRepository;
 
-    // ✅ Create
+    
     @PostMapping
     public ShippingMethod create(@RequestBody ShippingMethod method) {
         return shippingMethodRepository.save(method);
     }
 
-    // ✅ Read All
+    
     @GetMapping
     public List<ShippingMethod> getAll() {
         return shippingMethodRepository.findAll();
     }
 
-    // ✅ Read by ID
     @GetMapping("/{id}")
     public ResponseEntity<ShippingMethod> getById(@PathVariable String id) {
         Optional<ShippingMethod> method = shippingMethodRepository.findById(id);
@@ -37,18 +36,16 @@ public class ShippingMethodController {
                      .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Update
     @PutMapping("/{id}")
     public ResponseEntity<ShippingMethod> update(@PathVariable String id, @RequestBody ShippingMethod updatedMethod) {
         return shippingMethodRepository.findById(id)
             .map(existing -> {
-                updatedMethod.setId(id); // ID overwrite করে সঠিকভাবে update
+                updatedMethod.setId(id); 
                 return ResponseEntity.ok(shippingMethodRepository.save(updatedMethod));
             })
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Delete
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable String id) {
         if (shippingMethodRepository.existsById(id)) {
