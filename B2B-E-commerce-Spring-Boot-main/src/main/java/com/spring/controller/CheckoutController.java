@@ -18,16 +18,6 @@ public class CheckoutController {
     @Autowired
     private CheckoutRepository checkoutRepository;
 
-    // ✅ Create Checkout (used by Angular on form submit)
-//    @PostMapping
-//    public ResponseEntity<Checkout> create(@RequestBody Checkout checkout) {
-//        try {
-//            Checkout savedCheckout = checkoutRepository.save(checkout);
-//            return ResponseEntity.ok(savedCheckout);
-//        } catch (Exception e) {
-//            return ResponseEntity.internalServerError().build();
-//        }
-//    }
     @PostMapping
     public ResponseEntity<Checkout> create(@RequestBody Checkout checkout) {
         try {
@@ -39,13 +29,11 @@ public class CheckoutController {
     }
 
 
-    // ✅ Get all checkouts (admin purpose)
     @GetMapping
     public List<Checkout> getAll() {
         return checkoutRepository.findAll();
     }
 
-    // ✅ Get single checkout by ID
     @GetMapping("/{id}")
     public ResponseEntity<Checkout> getById(@PathVariable Long id) {
         Optional<Checkout> checkout = checkoutRepository.findById(id);
@@ -53,7 +41,6 @@ public class CheckoutController {
                        .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Update Checkout
     @PutMapping("/{id}")
     public ResponseEntity<Checkout> update(@PathVariable Long id, @RequestBody Checkout updatedCheckout) {
         return checkoutRepository.findById(id)
@@ -65,7 +52,6 @@ public class CheckoutController {
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Delete Checkout
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         if (checkoutRepository.existsById(id)) {
