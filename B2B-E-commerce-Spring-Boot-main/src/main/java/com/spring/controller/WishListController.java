@@ -15,12 +15,6 @@ public class WishListController {
 
     @Autowired
     private WishListService wishListService;
-//
-//    @PostMapping("/add")
-//    public ResponseEntity<WishList> addToWishList(@RequestBody WishListRequest request) {
-//        WishList added = wishListService.addToWishList(request.getUserId(), request.getProductId());
-//        return ResponseEntity.ok(added);
-//    }
 
     @GetMapping("/{userId}")
     public ResponseEntity<List<WishList>> getUserWishList(@PathVariable Long userId) {
