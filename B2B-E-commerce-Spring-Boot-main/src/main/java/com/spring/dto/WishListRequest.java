@@ -4,7 +4,6 @@ public class WishListRequest {
     private Long userId;
     private Long productId;
 
-    // Getter and Setter
     public Long getUserId() {
         return userId;
     }
