@@ -11,25 +11,24 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/payment-methods")
-@CrossOrigin(origins = "http://localhost:4200")// Angular বা অন্য client থেকে call করার জন্য
+@CrossOrigin(origins = "http://localhost:4200")
 public class PaymentMethodController {
 
     @Autowired
     private PaymentMethodRepository paymentMethodRepository;
 
-    // ✅ Create
+   
     @PostMapping
     public PaymentMethod create(@RequestBody PaymentMethod method) {
         return paymentMethodRepository.save(method);
     }
-
-    // ✅ Read All
+  
     @GetMapping
     public List<PaymentMethod> getAll() {
         return paymentMethodRepository.findAll();
     }
 
-    // ✅ Read by ID
+ 
     @GetMapping("/{id}")
     public ResponseEntity<PaymentMethod> getById(@PathVariable String id) {
         Optional<PaymentMethod> method = paymentMethodRepository.findById(id);
@@ -37,18 +36,17 @@ public class PaymentMethodController {
                      .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Update
+    
     @PutMapping("/{id}")
     public ResponseEntity<PaymentMethod> update(@PathVariable String id, @RequestBody PaymentMethod updatedMethod) {
         return paymentMethodRepository.findById(id)
             .map(existing -> {
-                updatedMethod.setId(id); // overwrite ID to ensure it doesn't change
+                updatedMethod.setId(id);
                 return ResponseEntity.ok(paymentMethodRepository.save(updatedMethod));
             })
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Delete
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable String id) {
         if (paymentMethodRepository.existsById(id)) {
