@@ -30,12 +30,12 @@ public class AuthController {
         );
 
         if (!users.isEmpty()) {
-            User user = users.get(0); // প্রথম মিলে যাওয়া user নিলাম
+            User user = users.get(0); 
             session.setAttribute("user", user);
             return ResponseEntity.ok(user);
         }
 
-        return ResponseEntity.status(401).build(); // ইউজার না থাকলে Unauthorized
+        return ResponseEntity.status(401).build();
     }
 
 
@@ -58,7 +58,7 @@ public class AuthController {
         private String email;
         private String password;
 
-        // Getters and Setters
+        
         public String getEmail() {
             return email;
         }
