@@ -17,19 +17,19 @@ public class AddressController {
     @Autowired
     private AddressRepository addressRepository;
 
-    // ✅ Create Address
+    //  Create 
     @PostMapping
     public Address createAddress(@RequestBody Address address) {
         return addressRepository.save(address);
     }
 
-    // ✅ Read All Addresses
+    //  Read 
     @GetMapping
     public List<Address> getAllAddresses() {
         return addressRepository.findAll();
     }
 
-    // ✅ Read Address by ID
+    //  Read Address by ID
     @GetMapping("/{id}")
     public ResponseEntity<Address> getAddressById(@PathVariable Long id) {
         Optional<Address> address = addressRepository.findById(id);
@@ -37,7 +37,7 @@ public class AddressController {
                       .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Update Address
+    // Update
     @PutMapping("/{id}")
     public ResponseEntity<Address> updateAddress(@PathVariable Long id, @RequestBody Address updatedAddress) {
         return addressRepository.findById(id)
@@ -48,7 +48,7 @@ public class AddressController {
             .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // ✅ Delete Address
+    // Delete 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAddress(@PathVariable Long id) {
         if (addressRepository.existsById(id)) {
